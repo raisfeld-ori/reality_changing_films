@@ -6,30 +6,30 @@ export default function AboutUs() {
       name: "Alice Johnson",
       role: "Director",
       description: "Award-winning director with over 15 years of experience in the film industry.",
-      imageUrl: "https://picsum.photos/500/400",
+      imageUrl: "https://picsum.photos/id/98/1000/1000",
     },
     {
       name: "Bob Smith",
       role: "Cinematographer",
       description: "Innovative cinematographer known for creating visually stunning and immersive scenes.",
-      imageUrl: "https://picsum.photos/500/700",
+      imageUrl: "https://picsum.photos/id/101/1000/1000",
     },
     {
       name: "Carol Williams",
       role: "Producer",
       description: "Experienced producer with a track record of bringing ambitious projects to life.",
-      imageUrl: "https://picsum.photos/200/400",
+      imageUrl: "https://picsum.photos/id/99/1000/1000",
     },
     {
       name: "David Brown",
       role: "Screenwriter",
       description: "Talented screenwriter with a knack for crafting compelling narratives and memorable characters.",
-      imageUrl: "https://picsum.photos/200/300",
+      imageUrl: "https://picsum.photos/id/100/1000/1000",
     },
   ]
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">קולנוע משנה מציאות</h1>
       <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
         Cinematic Visions is a cutting-edge film production company dedicated to creating immersive and thought-provoking cinematic experiences. Our team of passionate professionals brings creativity and technical expertise to every project.

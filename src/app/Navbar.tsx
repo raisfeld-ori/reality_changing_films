@@ -25,7 +25,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white shadow" dir="rtl">
+    <nav className="bg-white fixed top-0 left-0 w-full z-50 shadow" dir="rtl">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between h-20">
           <div className="flex items-center space-x-8 space-x-reverse">
@@ -144,21 +144,21 @@ export default function Navbar() {
                 {isDropdownOpen && (
                   <div className="pr-4">
                     <Link
-                      href="/first"
+                      href="/movies/first"
                       className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >
                       פנתר לבן
                     </Link>
                     <Link
-                      href="/second"
+                      href="/movies/second"
                       className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >
                       אל תחכי לי
                     </Link>
                     <Link
-                      href="/third"
+                      href="/movies/third"
                       className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >

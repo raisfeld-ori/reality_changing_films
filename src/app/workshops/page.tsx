@@ -3,7 +3,7 @@ import Explanation from './Explanation';
 
 export default function Page() {
     return (
-        <div className="page mx-auto flex h-svh flex-row items-stretch justify-center overflow-hidden">
+        <div className="mx-auto flex flex-col h-screen items-stretch justify-center overflow-hidden md:flex-row">
             <ImageCarousel />
             <Explanation />
         </div>

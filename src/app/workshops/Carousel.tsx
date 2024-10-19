@@ -22,7 +22,7 @@ export default function Component() {
   }, [])
 
   return (
-    <div className="relative w-screen h-full overflow-hidden bg-black">
+    <div className="relative w-screen h-full overflow-hidden bg-white">
       {images.map((src, index) => (
         <div
           key={src}
@@ -35,7 +35,7 @@ export default function Component() {
             alt={`Slide ${index + 1}`}
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-contain"
             priority={index === 0}
           />
         </div>
