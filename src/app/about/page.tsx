@@ -30,7 +30,7 @@ export default function AboutUs() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">קולנוע משנה מציאות</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">קולנוע משנה מציאות</h1>
       <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
         Cinematic Visions is a cutting-edge film production company dedicated to creating immersive and thought-provoking cinematic experiences. Our team of passionate professionals brings creativity and technical expertise to every project.
       </p>

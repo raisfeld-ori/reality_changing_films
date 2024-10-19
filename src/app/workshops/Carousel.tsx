@@ -1,44 +1,45 @@
-'use client'
+"use client"
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const images = [
-  'https://picsum.photos/500/500',
-  'https://picsum.photos/501/500',
-  'https://picsum.photos/502/500',
-  'https://picsum.photos/503/500',
+  "https://picsum.photos/id/237/1920/1080",
+  "https://picsum.photos/id/238/1920/1080",
+  "https://picsum.photos/id/239/1920/1080",
+  "https://picsum.photos/id/240/1920/1080",
 ]
 
-export default function AutoCarouselRTL() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+export default function Component() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-    }, 3000) // Change image every 3 seconds
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg bg-blue-600">
-      <div 
-        className="flex flex-row-reverse transition-transform duration-500 ease-in-out"
-        style={{ transform: `translateX(${currentIndex * 100}%)` }}
-      >
-        {images.map((src, index) => (
-          <div key={index} className="w-full flex-shrink-0">
-            <Image
-              src={src}
-              alt={`Carousel image ${index + 1}`}
-              width={600}
-              height={400}
-              className="w-full h-auto"
-            />
-          </div>
-        ))}
-      </div>
+    <div className="relative w-screen h-full overflow-hidden bg-black">
+      {images.map((src, index) => (
+        <div
+          key={src}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
+        >
+          <Image
+            src={src}
+            alt={`Slide ${index + 1}`}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority={index === 0}
+          />
+        </div>
+      ))}
     </div>
   )
 }
