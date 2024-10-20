@@ -84,7 +84,7 @@ export default function ContactUs() {
           )}
         </div>
         <div className="md:w-1/2 md:pl-8 border-t md:border-t-0 md:border-r border-gray-200 pt-8 md:pt-0">
-          <h3 className="text-2xl font-bold mb-6 text-gray-800">צור איתנו קשר</h3>
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">צרו איתנו קשר</h3>
           <div className="space-y-4">
             <div className="flex items-center">
               <Mail className="w-6 h-6 text-blue-600 ml-2" />

@@ -18,12 +18,12 @@ const heroContent = [
     description: "עסק ישראלי שמכין סרטים וסדנאות כבר 20+ שנה"
   },
   {
-    video: "/first.mp4",
-    title: "הסרטים הכי נצפים בארץ",
+    video: "/second.mp4",
+    title: "סרטים הכי נצפים ברץ",
     description: "כאן יש עוד טקסט שמסביר עוד דברים"
   },
   {
-    video: "/first.mp4",
+    video: "/third.mp4",
     title: "עוד משהו נוסף",
     description: "אני לא יודע מה לשים פה"
   }
@@ -40,7 +40,7 @@ export function DynamicFilmHero() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
         setIsTransitioning(false)
       }, 500) // Half a second for fade out, then change content
-    }, 5000) // Change every 5 seconds
+    }, 10 * 1000) // Change every 5 seconds
 
     return () => clearInterval(interval)
   }, [])
@@ -66,17 +66,17 @@ export function DynamicFilmHero() {
       <div className="absolute inset-0 bg-black bg-opacity-50" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center justify-end">
+      <div className="relative z-10 flex h-full items-center justify-center md:justify-end">
         <div className="w-full max-w-xl px-6 text-right">
           <h1 
-            className={`mb-4 font-serif text-4xl font-bold text-white transition-opacity duration-500 sm:text-6xl ${
+            className={`mb-4 font-serif text-4xl font-bold text-white transition-opacity duration-500 sm:text-6xl text-center md:text-left ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
             {currentContent.title}
           </h1>
           <p 
-            className={`ml-auto max-w-md text-lg text-gray-200 transition-opacity duration-500 ${
+            className={`ml-auto max-w-md text-lg text-gray-200 transition-opacity duration-500 text-center md:text-left ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
