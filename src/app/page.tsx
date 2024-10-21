@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -29,7 +28,7 @@ const heroContent = [
   }
 ]
 
-export function DynamicFilmHero() {
+function DynamicFilmHero() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
