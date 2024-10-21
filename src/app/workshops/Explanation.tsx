@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Component() {
   return (
-    <div className="min-h-screen w-full bg-white flex items-center justify-center p-4">
+    <div className="w-full bg-white flex items-center justify-center p-4">
       <div className="max-w-4xl w-full text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-8">
           סדנאות קולנוע ומשחק
