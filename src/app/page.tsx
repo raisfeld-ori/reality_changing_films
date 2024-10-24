@@ -8,23 +8,34 @@ export default function Home() {
   );
 }
 
+import { title } from 'process';
 import { useState, useEffect } from 'react'
 
-const heroContent = [
+const heroContent: {video: string, title: string, description: string}[] = [
   {
-    video: "/first.mp4",
+    video: "/movie clip 1.mp4",
     title: "קולנוע משנה מציאות",
     description: "עסק ישראלי שמכין סרטים וסדנאות כבר 20+ שנה"
   },
   {
-    video: "/second.mp4",
+    video: "/movie clip2.mp4",
     title: "סרטים הכי נצפים ברץ",
     description: "כאן יש עוד טקסט שמסביר עוד דברים"
   },
   {
-    video: "/third.mp4",
+    video: "/movie clip 3.mp4",
     title: "עוד משהו נוסף",
     description: "אני לא יודע מה לשים פה"
+  },
+  {
+    video: "/movie clip 4.mp4",
+    title: "title",
+    description: "description"
+  },
+  {
+    video: '/movie clip 5.mp4',
+    title: "title",
+    description: 'description'
   }
 ]
 
