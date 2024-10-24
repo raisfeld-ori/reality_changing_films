@@ -8,7 +8,6 @@ export default function Home() {
   );
 }
 
-import { title } from 'process';
 import { useState, useEffect } from 'react'
 
 const heroContent: {video: string, title: string, description: string}[] = [
