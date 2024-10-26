@@ -76,16 +76,16 @@ function DynamicFilmHero() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center md:justify-end">
-        <div className="w-full max-w-xl px-6 text-right">
+        <div className="w-full px-6 text-right">
           <h1 
-            className={`mb-4 font-serif text-4xl font-bold text-white transition-opacity duration-500 sm:text-6xl text-center md:text-left ${
+            className={`mb-4 font-serif text-4xl font-bold text-white transition-opacity duration-500 sm:text-6xl text-center ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
             {currentContent.title}
           </h1>
           <p 
-            className={`ml-auto max-w-md text-lg text-gray-200 transition-opacity duration-500 text-center md:text-left ${
+            className={`ml-auto mr-auto max-w-md text-lg text-center text-gray-200 transition-opacity duration-500 ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
