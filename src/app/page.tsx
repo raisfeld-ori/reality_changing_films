@@ -18,7 +18,7 @@ const heroContent: {video: string, title: string, description: string}[] = [
   },
   {
     video: "/movie clip2.mp4",
-    title: "סרטים הכי נצפים ברץ",
+    title: "כל סרט מלווה בסדנת משחק ואודישנים",
     description: "כאן יש עוד טקסט שמסביר עוד דברים"
   },
   {
