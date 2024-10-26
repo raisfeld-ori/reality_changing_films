@@ -49,7 +49,7 @@ function DynamicFilmHero() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
         setIsTransitioning(false)
       }, 500) // Half a second for fade out, then change content
-    }, 10 * 1000) // Change every 5 seconds
+    }, 5 * 1000)
 
     return () => clearInterval(interval)
   }, [])
