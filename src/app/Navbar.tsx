@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav className="bg-white fixed top-0 left-0 w-full z-50 shadow" dir="rtl">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between h-20">
-          <div className="flex items-center space-x-8 space-x-reverse">
+          <div className="flex items-center space-x-8 space-x-reverse cursor-pointer">
             <Link href={'/'} className="flex-shrink-0">
               <span className="text-2xl font-bold text-blue-600 cursor-default">קולנוע משנה מציאות</span>
             </Link>
@@ -39,11 +39,9 @@ export default function Navbar() {
               >
                 לגבינו
               </Link>
-              <div className="relative h-20 flex items-center">
-              <a href="/movies/first" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">פנתר לבן</a>
-              <a href="/movies/second" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אל תחכי לי</a>
-              <a href="/movies/third" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אמצע החיים</a>
-              </div>
+              <a href="/movies/first" className="block px-4 text-sm text-gray-500 hover:text-gray-700" role="menuitem">פנתר לבן</a>
+              <a href="/movies/second" className="block px-4 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אל תחכי לי</a>
+              <a href="/movies/third" className="block px-4 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אמצע החיים</a>
               <Link
                 href="/workshops"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
