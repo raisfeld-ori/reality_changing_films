@@ -24,17 +24,17 @@ const heroContent: {video: string, title: string, description: string}[] = [
   {
     video: "/movie clip 3.mp4",
     title: "מומלץ על ידי משרד החינוך והגפן",
-    description: "משובים עם ציונים מעל ל95"
+    description: "משובים עם ציונים מעל 90"
   },
   {
     video: "/movie clip 4.mp4",
-    title: "title",
-    description: "description"
+    title: "הסרטים הכי נצפים בחטיבות ותיכונים",
+    description: "מעל 250 הקרנות בשנה"
   },
   {
     video: '/movie clip 5.mp4',
-    title: "title",
-    description: 'description'
+    title: "מומלץ על ידי משרד החינוך והגפן",
+    description: "משובים עם ציונים מעל 90"
   }
 ]
 
