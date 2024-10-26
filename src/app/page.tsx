@@ -13,8 +13,8 @@ import { useState, useEffect } from 'react'
 const heroContent: {video: string, title: string, description: string}[] = [
   {
     video: "/movie clip 1.mp4",
-    title: "קולנוע משנה מציאות",
-    description: "עסק ישראלי שמכין סרטים וסדנאות כבר 20+ שנה"
+    title: "הסרטים הכי נצפים בחטיבות ותיכונים",
+    description: "כאן יש עוד טקסט שמסביר עוד דברים"
   },
   {
     video: "/movie clip2.mp4",
