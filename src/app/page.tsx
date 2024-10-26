@@ -19,7 +19,7 @@ const heroContent: {video: string, title: string, description: string}[] = [
   {
     video: "/movie clip2.mp4",
     title: "כל סרט מלווה בסדנת משחק ואודישנים",
-    description: "כאן יש עוד טקסט שמסביר עוד דברים"
+    description: "הסרטים והסדנאות מותאמים לפי שכבות גיל ז-יב"
   },
   {
     video: "/movie clip 3.mp4",
