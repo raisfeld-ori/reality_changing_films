@@ -14,7 +14,7 @@ const heroContent: {video: string, title: string, description: string}[] = [
   {
     video: "/movie clip 1.mp4",
     title: "הסרטים הכי נצפים בחטיבות ותיכונים",
-    description: "מומלצי משרד החינוך והגפן"
+    description: "מעל 250 הקרנות בשנה"
   },
   {
     video: "/movie clip2.mp4",
@@ -23,8 +23,8 @@ const heroContent: {video: string, title: string, description: string}[] = [
   },
   {
     video: "/movie clip 3.mp4",
-    title: "עוד משהו נוסף",
-    description: "אני לא יודע מה לשים פה"
+    title: "מומלץ על ידי משרד החינוך והגפן",
+    description: "משובים עם ציונים מעל ל95"
   },
   {
     video: "/movie clip 4.mp4",
