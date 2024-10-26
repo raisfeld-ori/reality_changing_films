@@ -40,9 +40,9 @@ export default function Navbar() {
                 לגבינו
               </Link>
               <div className="relative h-20 flex items-center">
-              <a href="/movies/first" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">פנתר לבן</a>
-              <a href="/movies/second" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">אל תחכי לי</a>
-              <a href="/movies/third" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">אמצע החיים</a>
+              <a href="/movies/first" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">פנתר לבן</a>
+              <a href="/movies/second" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אל תחכי לי</a>
+              <a href="/movies/third" className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700" role="menuitem">אמצע החיים</a>
               </div>
               <Link
                 href="/workshops"
