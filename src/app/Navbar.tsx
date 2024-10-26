@@ -29,39 +29,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between h-20">
           <div className="flex items-center space-x-8 space-x-reverse">
-            <div className="flex-shrink-0">
+            <Link href={'/'} className="flex-shrink-0">
               <span className="text-2xl font-bold text-blue-600 cursor-default">קולנוע משנה מציאות</span>
-            </div>
+            </Link>
             <div className="hidden sm:flex sm:space-x-8 sm:space-x-reverse">
-              <Link
-                href="/"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
-              >
-                דף הבית
-              </Link>
               <Link
                 href="/about"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
               >
-                אודות
+                לגבינו
               </Link>
               <div className="relative h-20 flex items-center">
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium focus:outline-none h-full"
-                >
-                  סרטים
-                  <ChevronDown className="mr-1 h-4 w-4" />
-                </button>
-                {isDropdownOpen && (
-                  <div className="absolute right-0 top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 cursor-pointer">
-                    <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                      <a href="/movies/first" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">פנתר לבן</a>
-                      <a href="/movies/second" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">אל תחכי לי</a>
-                      <a href="/movies/third" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">אמצע החיים</a>
-                    </div>
-                  </div>
-                )}
+              <a href="/movies/first" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">פנתר לבן</a>
+              <a href="/movies/second" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">אל תחכי לי</a>
+              <a href="/movies/third" className="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-300" role="menuitem">אמצע החיים</a>
               </div>
               <Link
                 href="/workshops"
