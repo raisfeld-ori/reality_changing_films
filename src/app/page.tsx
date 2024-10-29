@@ -120,7 +120,7 @@ const imageVariants = {
   }),
 }
 
-export function LoadingAnimation({page}: {page: JSX.Element}) {
+function LoadingAnimation({page}: {page: JSX.Element}) {
   const [[currentImageIndex, direction], setCurrentImage] = useState([0, 0])
   const [showContent, setShowContent] = useState(false)
 
