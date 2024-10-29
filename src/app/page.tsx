@@ -47,7 +47,7 @@ function DynamicFilmHero() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
         setIsTransitioning(false)
       }, 1000) // Half a second for fade out, then change content
-    }, 6 * 1000)
+    }, 8 * 1000)
 
     return () => clearInterval(interval)
   }, [])
@@ -62,7 +62,7 @@ function DynamicFilmHero() {
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-500"
+        className="absolute top-0 left-0 h-full w-full object-cover transition-opacity z-10 duration-500"
         style={{ opacity: isTransitioning ? 0 : 1 }}
       >
         <source src={currentContent.video} type="video/mp4" />
@@ -71,6 +71,7 @@ function DynamicFilmHero() {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-0" />
+      <div className='absolute top-1/3 w-full text-center text-9xl font-bold z-0'>קולנוע משנה מציאות</div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-svw items-center justify-center md:justify">
