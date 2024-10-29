@@ -70,7 +70,7 @@ function DynamicFilmHero() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
+      <div className="absolute inset-0 bg-black bg-opacity-0" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-svw items-center justify-center md:justify">
@@ -153,7 +153,7 @@ export function LoadingAnimation({page}: {page: JSX.Element}) {
             <img
               src={images[currentImageIndex]}
               alt={`Loading image ${currentImageIndex + 1}`}
-              className="w-screen h-full mx-auto rounded-lg shadow-lg object-fill"
+              className="w-1/2 h-full mx-auto rounded-lg shadow-lg object-fill"
             />
           </motion.div>
         ) : (
