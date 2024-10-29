@@ -1,30 +1,34 @@
 import Image from "next/image"
+import dani from './dani.jpg';
+import hila from './hila2.jpg';
+import raz from './raz.jpg';
+import yavgani from './yavgani.jpg';
 
 export default function AboutUs() {
   const teamMembers = [
     {
-      name: "Alice Johnson",
-      role: "Director",
-      description: "Award-winning director with over 15 years of experience in the film industry.",
-      imageUrl: "https://picsum.photos/id/98/1000/1000",
+      name: "דני ריספלד",
+      role: "במאי קולנוע",
+      description: "במאי סרטי קולנוע ותסריטאי בעל תואר שני וניסיון רב בתחום החינוך בין סרטיו \"פנתר לבן\" \"אל תחכי לי\" \"אמצע החיים\" בכיכובם של צחי הלוי ושלום אסייג- יוצא לקולנוע בשנת 2024. ראש המסלול לתקשורת וקולנוע במכללת כנרת לשעבר ומרצה במכללות ספיר ואוניברסיטת אריאל. בעשור האחרון מרצה בבתי ספר עם סרטיו במסגרת המאבק באלימות וגזענות של בני נוער.",
+      imageUrl: dani,
     },
     {
-      name: "Bob Smith",
-      role: "Cinematographer",
-      description: "Innovative cinematographer known for creating visually stunning and immersive scenes.",
-      imageUrl: "https://picsum.photos/id/101/1000/1000",
+      name: "הילה ריספלד",
+      role: "תסריטאית ומנהלת השיווק",
+      description: "אני מאמינה שסרט קולנוע הוא אמצעי לעורר שיח איכותי סביב נושאים חברתיים בוערים ולכן כל הכתיבה והעשייה שלי היא למען הנוער .  פיתחנו את סרטי הקולנוע בכדי לזכות בחברה טובה יותר וסבלנית. מעבר להיותי תסריטאית ומפיצה אני גם אשתו של דני רייספלד במאי הסרטים",
+      imageUrl: hila,
     },
     {
-      name: "Carol Williams",
-      role: "Producer",
-      description: "Experienced producer with a track record of bringing ambitious projects to life.",
-      imageUrl: "https://picsum.photos/id/99/1000/1000",
+      name: "רז מזרחי",
+      role: "שחקן ראשי, אל תחכי לי",
+      description: "'חברות' - עונה 3 בתפקיד שלומי 'נאפס'-HOT -בתפקיד בן אלפסי 'בני אור' - בתפקיד מסו 'אל תחכי לי' בתפקיד ציון כהן 'לאהוב את צ'רלי בתפקיד איציק השבדי",
+      imageUrl: raz,
     },
     {
-      name: "David Brown",
-      role: "Screenwriter",
-      description: "Talented screenwriter with a knack for crafting compelling narratives and memorable characters.",
-      imageUrl: "https://picsum.photos/id/100/1000/1000",
+      name: "יבגני אורלוב",
+      role: "שחקן ראשי, פנתר לבן",
+      description: "שחקן קולנוע בסרט פנתר לבן מרצה ומוביל סדנאות משחק. כנער בסיכוי שעבר את המסע כעולה חדש זועם להשתלבות מלאה בחברה הישראלית . ההרצאות שלי מלוות בהומור ויחס אישי לכל תלמיד.",
+      imageUrl: yavgani,
     },
   ]
 
@@ -49,7 +53,7 @@ export default function AboutUs() {
             <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h3>
               <p className="text-sm text-gray-600 mb-4">{member.role}</p>
-              <p className="text-sm text-gray-700">{member.description}</p>
+              <p className="text-sm text-gray-700" dir="rtl">{member.description}</p>
             </div>
           </div>
         ))}
