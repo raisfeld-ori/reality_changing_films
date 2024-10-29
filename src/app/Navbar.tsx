@@ -126,21 +126,21 @@ export default function Navbar() {
                   <div className="pr-4">
                     <Link
                       href="/movies/first"
-                      className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
+                      className="block py-2 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >
                       פנתר לבן
                     </Link>
                     <Link
                       href="/movies/second"
-                      className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
+                      className="block py-2 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >
                       אל תחכי לי
                     </Link>
                     <Link
                       href="/movies/third"
-                      className="block py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-blue-600"
+                      className="block py-2 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
                       onClick={closeMobileMenu}
                     >
                       אמצע החיים

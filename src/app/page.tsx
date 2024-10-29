@@ -148,7 +148,7 @@ export function LoadingAnimation({page}: {page: JSX.Element}) {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="text-center"
+            className="text-center mt-auto"
           >
             <img
               src={images[currentImageIndex]}
