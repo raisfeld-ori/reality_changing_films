@@ -36,7 +36,9 @@ export default function AboutUs() {
     <div className="container mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">קולנוע משנה מציאות</h1>
       <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-        Cinematic Visions is a cutting-edge film production company dedicated to creating immersive and thought-provoking cinematic experiences. Our team of passionate professionals brings creativity and technical expertise to every project.
+      הסרטים הכי נצפים בחטיבות ותיכונים בישראל.  
+לאחר הצפייה בסרט מתקיימת פעילות עיבוד לסרט וסדנת משחק מול מצלמה.  לכל סרט מערך שעור מותאם גיל. <br></br>הסרטים מותאמים לגילאי חטיבה. תיכון. צבא. אנו מאמינים שלצד מסר חזק של מאבק באלימות, גזענות וחרם  יהיה גם גם כיף גדול וריגוש לתלמידים.
+ניתן להזמין גם סדנאות קולנוע  עם במאי ושחקן בה התלמידים כותבים ומשחקים בסצנות מול מצלמה
       </p>
 
       <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">תכירו אותנו</h2>

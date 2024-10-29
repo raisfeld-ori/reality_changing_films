@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, FormEvent } from "react"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function ContactUs() {
   const [name, setName] = useState("")
@@ -98,25 +98,6 @@ export default function ContactUs() {
               <MapPin className="w-6 h-6 text-blue-600 ml-2" />
               <span className="text-gray-700">רחוב ראשי 123, עיר, מדינה</span>
             </div>
-          </div>
-          <h3 className="text-2xl font-bold my-6 text-gray-800">עקבו אחרינו</h3>
-          <div className="flex space-x-reverse space-x-4">
-            <a href="#" className="text-gray-400 hover:text-blue-600">
-              <Facebook className="w-6 h-6" />
-              <span className="sr-only">פייסבוק</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-blue-600">
-              <Twitter className="w-6 h-6" />
-              <span className="sr-only">טוויטר</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-blue-600">
-              <Instagram className="w-6 h-6" />
-              <span className="sr-only">אינסטגרם</span>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-blue-600">
-              <Linkedin className="w-6 h-6" />
-              <span className="sr-only">לינקדאין</span>
-            </a>
           </div>
         </div>
       </div>
