@@ -71,7 +71,7 @@ function DynamicFilmHero() {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-0" />
-      <div className='absolute top-1/3 w-full text-center text-9xl font-bold z-0'>קולנוע משנה מציאות</div>
+      <div className='absolute top-1/4 w-full text-center text-9xl font-bold z-0'>קולנוע משנה מציאות</div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-svw items-center justify-center md:justify">
