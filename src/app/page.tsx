@@ -95,78 +95,59 @@ function DynamicFilmHero() {
     </div>
   )
 }
-
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// Replace these with your actual image URLs
-const images = [
-  'https://picsum.photos/2000',
-  'https://picsum.photos/2100',
-  'https://picsum.photos/2200',
-  'https://picsum.photos/2300',
-]
-
-const imageVariants = {
-  enter: (direction: number) => ({
-    y: direction > 0 ? 200 : -200,
-    opacity: 0,
-  }),
-  center: {
-    y: 0,
-    opacity: 1,
-  },
-  exit: (direction: number) => ({
-    y: direction < 0 ? 200 : -200,
-    opacity: 0,
-  }),
-}
-
-function LoadingAnimation({page}: {page: JSX.Element}) {
-  const [[currentImageIndex, direction], setCurrentImage] = useState([0, 0])
+function LoadingAnimation(props: { page: JSX.Element }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [showContent, setShowContent] = useState(false)
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (currentImageIndex < images.length - 1) {
-        setCurrentImage([currentImageIndex + 1, 1])
-      } else {
-        setShowContent(true)
-      }
-    }, 2 * 1000) // Change image every 2 seconds
+  const images = [
+    '/dontwaitforme.jpg',
+    '/middlelife.jpg',
+    '/whitepanther.jpg',
+    '/image2.jpg',
+  ]
 
-    return () => clearTimeout(timer)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentImageIndex < images.length - 1) {
+        setCurrentImageIndex(prevIndex => prevIndex + 1)
+      } else {
+        clearInterval(interval)
+        setTimeout(() => setShowContent(true), 500)
+      }
+    }, 1500)
+
+    return () => clearInterval(interval)
   }, [currentImageIndex])
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gray-100 overflow-hidden">
-      <AnimatePresence mode="wait" initial={false} custom={direction}>
-        {!showContent ? (
+    <div className="relative h-screen w-full overflow-hidden bg-white">
+      <AnimatePresence>
+        {!showContent && (
           <motion.div
-            key={`loading-${currentImageIndex}`}
-            custom={direction}
-            variants={imageVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="text-center mt-auto"
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 flex items-center justify-center"
           >
-            <img
+            <Image
               src={images[currentImageIndex]}
-              alt={`Loading image ${currentImageIndex + 1}`}
-              className="w-1/2 h-full mx-auto rounded-lg shadow-lg object-fill"
+              alt={``}
+              width={600}
+              height={300}
+              className="object-fit"
             />
           </motion.div>
-        ) : (
-          <motion.div
-            key="content"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
-            {page}
-          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showContent && (
+          props.page
         )}
       </AnimatePresence>
     </div>
