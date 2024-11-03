@@ -18,7 +18,7 @@ export default function MovieShowcase({
 }: MovieShowcaseProps) {
   return (
     <div 
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
+      className="relative w-full h-screen bg-contain bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${backgroundImageSrc})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50" />
