@@ -31,7 +31,7 @@ export default function MovieShowcase({
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
           <Play size={24} className="mr-2" />
-          צפייה בטריילר
+          צפייה
         </button>
         </Link>
       </div>
