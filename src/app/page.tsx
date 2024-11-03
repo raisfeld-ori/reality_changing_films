@@ -29,6 +29,11 @@ const heroContent: {video: string, title: string, description: string}[] = [
     title: "מייצרים סרטים וסדנאות לנוער בהצלחה מעל 20 שנה",
     description: ""
   },
+  {
+    video: '/movie clip 5.mp4',
+    title: 'סדנאות משחק ואודישנים',
+    description: '',
+  }
 ]
 
 function DynamicFilmHero() {
