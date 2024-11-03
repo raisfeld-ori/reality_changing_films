@@ -5,14 +5,14 @@ import { Play } from 'lucide-react'
 
 interface MovieShowcaseProps {
   title: string
-  description: string
+  description: string[]
   trailerSrc: string
   backgroundImageSrc: string
 }
 
 export default function MovieShowcase({
   title = "Interstellar",
-  description = "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+  description = ["A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."],
   trailerSrc = "https://www.example.com/interstellar-trailer.mp4",
   backgroundImageSrc = "https://example.com/interstellar-background.jpg"
 }: MovieShowcaseProps) {
@@ -25,7 +25,7 @@ export default function MovieShowcase({
       
       <div className="relative z-10 text-white text-center max-w-4xl px-4 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
-        <p className="text-xl md:text-2xl mb-8">{description}</p>
+        <p className="text-xl md:text-2xl mb-8">{description.map((p) => <p>{p}<br></br></p>)}</p>
         <Link href={trailerSrc} target="_blank">
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
