@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "קולנוע משנה מציאות",
   description: "סרטים וסדנאות מותאמים לבני נוער",
-  icons: {'icon': '/favicon.ico'},
+  icons: {'icon': '/icon.ico'},
 };
 
 export default function RootLayout({
