@@ -31,7 +31,12 @@ const heroContent: {video: string, title: string, description: string}[] = [
   },
   {
     video: '/movie clip 5.mp4',
-    title: 'סדנאות משחק ואודישנים',
+    title: 'סדנאות משחק ואודישנים אחרי כל הקרנה',
+    description: '',
+  },
+  {
+    video: '/images.mp4',
+    title: '',
     description: '',
   }
 ]
