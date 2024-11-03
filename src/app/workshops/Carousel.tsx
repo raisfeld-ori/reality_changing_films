@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-const images = [
-  "/image1.jpg",
-  "/image2.jpg",
-  "/image3.png",
-]
+const images = Array.from({length: 16}).map((_, i) => {return '/image (' + (i + 1) + ').jpg'})
 
 export default function Component() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
