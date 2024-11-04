@@ -6,11 +6,11 @@ export default function Component() {
   return (
     <div className="w-full bg-white flex items-center justify-center p-4">
       <div className="max-w-4xl w-full text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-8">
+        <h1 className="text-2xl md:text-4xl font-bold text-blue-600 mb-8">
           סדנאות אודישנים ומשחק מול מצלמה
         </h1>
         <div className="h-1 w-32 bg-blue-600 mx-auto mb-8"></div>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
+        <p className="text-lg md:text-2xl text-gray-700 leading-relaxed mb-12">
           הסדנה מציע למשתתפים חוויה של יצירתיות והבעת ביטחות עצמי דרך משחק.
           לכל הקרנה אנחנו מגיעים עם מצלמת קולנוע וציוד מקצועי.
           התלמידים עולים על הבמה ומייצרים סצנות מהחיים והדילמות שמצטלמים מול הקהל.
