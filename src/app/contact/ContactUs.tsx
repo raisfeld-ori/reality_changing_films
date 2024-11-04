@@ -26,7 +26,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 flex items-center justify-center p-4" dir="rtl">
+    <div className="min-h-screen mt-10 md:mt-0 w-full bg-gray-100 flex items-center justify-center p-4" dir="rtl">
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-4xl flex flex-col md:flex-row-reverse">
         <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">צרו קשר</h2>

@@ -80,7 +80,14 @@ export default function FullScreenReview() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 md:hidden z-50">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 lg:hidden z-20">
+      <button
+          className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md"
+          onClick={goToNext}
+          aria-label="Next review"
+        >
+          <ChevronRight className="h-8 w-8" />
+        </button>
         <button
           className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md"
           onClick={goToPrevious}
@@ -88,23 +95,16 @@ export default function FullScreenReview() {
         >
           <ChevronLeft className="h-8 w-8" />
         </button>
-        <button
-          className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md"
-          onClick={goToNext}
-          aria-label="Next review"
-        >
-          <ChevronRight className="h-8 w-8" />
-        </button>
       </div>
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden md:block z-50"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden lg:block z-20"
         onClick={goToPrevious}
         aria-label="Previous review"
       >
         <ChevronLeft className="h-8 w-8" />
       </button>
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden md:block z-50"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden lg:block z-20"
         onClick={goToNext}
         aria-label="Next review"
       >
