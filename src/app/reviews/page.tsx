@@ -1,115 +1,153 @@
 'use client'
 
-import { useState } from 'react'
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Star, Play, Pause } from "lucide-react"
+import Image from 'next/image'
 
+// Sample review data
 const reviews = [
-  {
-    id: 1,
-    name: "Alice Johnson",
-    text: "An absolute masterpiece! The storytelling is captivating from start to finish.",
-    score: 5,
-    media: "/placeholder.svg?height=400&width=600",
-    isVideo: false
+  { 
+    id: 1, 
+    title: "John Doe", 
+    jobTitle: "Software Engineer", 
+    rating: 5, 
+    text: "Excellent product! Highly recommended.", 
+    media: { type: 'image', src: "/image (1).jpg" }
   },
-  {
-    id: 2,
-    name: "Bob Smith",
-    text: "While it has its moments, the pacing feels off in the middle. Still enjoyable overall.",
-    score: 3,
-    media: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    isVideo: true
+  { 
+    id: 2, 
+    title: "Jane Smith", 
+    jobTitle: "UX Designer", 
+    rating: 4, 
+    text: "Great experience overall, but there's room for improvement.", 
+    media: { type: 'video', src: "/first.mp4" }
   },
-  {
-    id: 3,
-    name: "Carol Davis",
-    text: "Innovative and thought-provoking. A must-see for any film enthusiast.",
-    score: 4,
-    media: "/placeholder.svg?height=400&width=600",
-    isVideo: false
-  }
+  { 
+    id: 3, 
+    title: "Mike Johnson", 
+    jobTitle: "Product Manager", 
+    rating: 5, 
+    text: "This exceeded my expectations. Will definitely use again!", 
+    media: { type: 'image', src: "/image (10).jpg" }
+  },
 ]
 
-export default function FullScreenReview() {
-  const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
-  const currentReview = reviews[currentReviewIndex]
+export default function SwipeableReviewCard() {
+  const [currentReview, setCurrentReview] = useState(0)
+  const [direction, setDirection] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
-  const goToPrevious = () => {
-    setCurrentReviewIndex((prevIndex) => 
-      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
-    )
+  const handleDragEnd = (_event: any, info: any) => {
+    if (info.offset.x < -100 && currentReview < reviews.length - 1) {
+      setDirection(1)
+      setCurrentReview(currentReview + 1)
+    } else if (info.offset.x > 100 && currentReview > 0) {
+      setDirection(-1)
+      setCurrentReview(currentReview - 1)
+    }
   }
 
-  const goToNext = () => {
-    setCurrentReviewIndex((prevIndex) => 
-      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
-    )
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+
+  useEffect(() => {
+    setIsPlaying(false)
+  }, [currentReview])
+
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
   }
 
   return (
-    <div className="relative h-screen w-screen bg-gray-100 text-gray-900 overflow-hidden flex items-center justify-center">
-      <div className="relative w-full max-w-5xl mx-4 p-8 bg-white shadow-xl rounded-lg">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2 aspect-video rounded-lg overflow-hidden shadow-md">
-            {currentReview.isVideo ? (
-              <video 
-                src={currentReview.media} 
-                className="w-full h-full object-cover"
-                autoPlay
-                controls
-              />
-            ) : (
-              <img 
-                src={currentReview.media} 
-                alt="Review media" 
-                className="w-full h-full object-cover"
-              />
-            )}
-          </div>
-          <div className="w-full md:w-1/2 space-y-4">
-            <h2 className="text-2xl font-bold">{currentReview.name}</h2>
-            <p className="text-lg">{currentReview.text}</p>
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <Star 
-                  key={i} 
-                  className={`w-6 h-6 ${i < currentReview.score ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-                />
-              ))}
+    <div className="flex items-center justify-center min-h-screen w-full bg-white overflow-hidden">
+      <div className="relative w-full h-full max-w-md mx-auto">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={currentReview}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={handleDragEnd}
+            className="absolute w-full h-full touch-none flex items-center justify-center"
+          >
+            <div className="bg-white shadow-xl rounded-lg overflow-hidden w-full max-w-sm">
+              <div className="relative h-48 w-full">
+                {reviews[currentReview].media.type === 'image' ? (
+                  <Image
+                    src={reviews[currentReview].media.src}
+                    alt={reviews[currentReview].title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                ) : (
+                  <div className="relative h-full w-full">
+                    <video
+                      ref={videoRef}
+                      src={reviews[currentReview].media.src}
+                      className="h-full w-full object-cover"
+                      controls
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div>
+                    <h2 className="text-xl font-semibold">{reviews[currentReview].title}</h2>
+                    <p className="text-sm text-gray-500">{reviews[currentReview].jobTitle}</p>
+                  </div>
+                </div>
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-5 h-5 ${
+                        i < reviews[currentReview].rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                      }`}
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">{reviews[currentReview].text}</p>
+                <div className="text-sm text-gray-500 text-center">
+                  <p className="mt-2">
+                    {currentReview + 1} / {reviews.length}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 lg:hidden z-20">
-      <button
-          className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md"
-          onClick={goToNext}
-          aria-label="Next review"
-        >
-          <ChevronRight className="h-8 w-8" />
-        </button>
-        <button
-          className="bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md"
-          onClick={goToPrevious}
-          aria-label="Previous review"
-        >
-          <ChevronLeft className="h-8 w-8" />
-        </button>
-      </div>
-      <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden lg:block z-20"
-        onClick={goToPrevious}
-        aria-label="Previous review"
-      >
-        <ChevronLeft className="h-8 w-8" />
-      </button>
-      <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-2 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 shadow-md hidden lg:block z-20"
-        onClick={goToNext}
-        aria-label="Next review"
-      >
-        <ChevronRight className="h-8 w-8" />
-      </button>
     </div>
   )
 }
