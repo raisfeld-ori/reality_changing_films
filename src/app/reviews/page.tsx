@@ -21,7 +21,7 @@ const reviews = [
     jobTitle: "UX Designer", 
     rating: 4, 
     text: "Great experience overall, but there's room for improvement.", 
-    media: { type: 'video', src: "/first.mp4" }
+    media: { type: 'video', src: "/images.mp4" }
   },
   { 
     id: 3, 
@@ -46,17 +46,6 @@ export default function SwipeableReviewCard() {
     } else if (info.offset.x > 100 && currentReview > 0) {
       setDirection(-1)
       setCurrentReview(currentReview - 1)
-    }
-  }
-
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-      } else {
-        videoRef.current.play()
-      }
-      setIsPlaying(!isPlaying)
     }
   }
 
