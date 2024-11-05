@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Star, Play, Pause } from "lucide-react"
+import { Star } from "lucide-react"
 import Image from 'next/image'
 
 // Sample review data
@@ -36,10 +36,9 @@ const reviews = [
 export default function SwipeableReviewCard() {
   const [currentReview, setCurrentReview] = useState(0)
   const [direction, setDirection] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  const handleDragEnd = (_event: any, info: any) => {
+  const handleDragEnd = (_event: any, info: {offset: {x: number}}) => {
     if (info.offset.x < -100 && currentReview < reviews.length - 1) {
       setDirection(1)
       setCurrentReview(currentReview + 1)
@@ -48,11 +47,6 @@ export default function SwipeableReviewCard() {
       setCurrentReview(currentReview - 1)
     }
   }
-
-  useEffect(() => {
-    setIsPlaying(false)
-  }, [currentReview])
-
   const variants = {
     enter: (direction: number) => ({
       x: direction > 0 ? '100%' : '-100%',
