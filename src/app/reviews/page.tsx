@@ -38,7 +38,7 @@ export default function SwipeableReviewCard() {
   const [direction, setDirection] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  const handleDragEnd = (_event: any, info: {offset: {x: number}}) => {
+  const handleDragEnd = (_event: MouseEvent, info: {offset: {x: number}}) => {
     if (info.offset.x < -100 && currentReview < reviews.length - 1) {
       setDirection(1)
       setCurrentReview(currentReview + 1)
