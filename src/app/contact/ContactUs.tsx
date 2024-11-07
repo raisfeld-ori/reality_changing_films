@@ -88,15 +88,11 @@ export default function ContactUs() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Mail className="w-6 h-6 text-blue-600 ml-2" />
-              <a href="mailto:contact@example.com" className="text-gray-700 hover:text-blue-600">contact@example.com</a>
+              <a href="mailto:hilaraisfeld@gmail.com" className="text-gray-700 hover:text-blue-600">hilaraisfeld@gmail.com</a>
             </div>
             <div className="flex items-center">
               <Phone className="w-6 h-6 text-blue-600 ml-2" />
-              <span className="text-gray-700">+1 (123) 456-7890</span>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="w-6 h-6 text-blue-600 ml-2" />
-              <span className="text-gray-700">רחוב ראשי 123, עיר, מדינה</span>
+              <span className="text-gray-700" dir="ltr">+972 50-355-5074</span>
             </div>
           </div>
         </div>
