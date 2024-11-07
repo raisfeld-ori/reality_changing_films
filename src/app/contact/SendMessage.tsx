@@ -1,18 +1,19 @@
+'use server'
 import nodemailer from 'nodemailer';
 
 const email = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "",
+        user: "hila.raisfeld@gmail.com",
         pass: "drzb umlg mdlw dkzo"
     }
 })
 
-export default function SendMessage(name: string, mail: string, content: string){
-    email.sendMail({
-        from: "hilaraisfeld@gmail.com",
-        to: "hilaraisfeld@gmail.com",
+export default async function SendMessage(name: string, mail: string, content: string){
+    return (await email.sendMail({
+        from: "hila.raisfeld@gmail.com",
+        to: "hila.raisfeld@gmail.com",
         subject: "צרו קשר",
         text: `שם: ${name}\nמייל: ${mail}\nתוכן ההודעה: ${content}`
-    })
+    })).response
 }

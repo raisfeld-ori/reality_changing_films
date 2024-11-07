@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react"
 import { Mail, Phone } from "lucide-react"
+import SendMessage from "./SendMessage"
 
 export default function ContactUs() {
   const [name, setName] = useState("")
@@ -15,10 +16,9 @@ export default function ContactUs() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const result = await SendMessage(name, email, message);
 
-    setSubmitStatus("ההודעה נשלחה בהצלחה!")
+    setSubmitStatus(result)
     setName("")
     setEmail("")
     setMessage("")
