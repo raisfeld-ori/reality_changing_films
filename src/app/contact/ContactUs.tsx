@@ -9,7 +9,7 @@ export default function ContactUs() {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<string | null>(null)
+  const [submitStatus, setSubmitStatus] = useState<{message: string, isok: boolean} | null>(null)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -17,8 +17,11 @@ export default function ContactUs() {
     setSubmitStatus(null)
 
     const result = await SendMessage(name, email, message);
-
-    setSubmitStatus(result)
+    if (result.startsWith('OK')){
+      setSubmitStatus({message: 'תודה שיצרתם איתנו קשר!', isok: true})
+    } else { 
+      setSubmitStatus({message: 'התקשרות נכשלה, אנא נסה שנית', isok: false})
+    }
     setName("")
     setEmail("")
     setMessage("")
@@ -78,8 +81,8 @@ export default function ContactUs() {
             </button>
           </form>
           {submitStatus && (
-            <div className="mt-4 text-center text-green-600 font-semibold">
-              {submitStatus}
+            <div className={"mt-4 text-center font-semibold " + submitStatus.isok ? "text-green-600" : "text-red-600"}>
+              {submitStatus.message}
             </div>
           )}
         </div>
