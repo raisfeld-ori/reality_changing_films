@@ -27,7 +27,13 @@ export default function Page(){
             title: 'המלצת מפמ"רית',
             text: "המלצת מפקחת תחום קולנוע משרד החינוך",
             media: {type: 'image', src: '/recommendedbymafmar.png', text: ''},
-        }
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/examples.png', text: 'לצפייה בכתבה', image: '/videoReviewIntro.png'},
+        },
+        
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
 }
