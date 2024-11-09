@@ -31,7 +31,7 @@ export default function Page(){
         {
             title: 'כתבו לנו מורים ותלמידים',
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
-            media: {type: 'image', src: '/studentreview1.png', text: 'לצפייה בכתבה', image: ''},
+            media: {type: 'image', src: '/studenreview1.png', text: 'לצפייה בכתבה', image: ''},
         },
         {
             title: 'כתבו לנו מורים ותלמידים',
