@@ -54,7 +54,7 @@ export default function MovieShowcase({
           className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
           <Tv size={24} className="mr-2 ml-2" />
-          מן התקשורת
+          ביקורות מהתעשייה
         </button>}
         {!!reviews && reviews.length > 0 && <button
           onClick={() => setShowReviews(true)}
