@@ -6,6 +6,11 @@ export default function Page(){
     ' סרט המספר את המסע לאליפות של אלקס, נער זועם וכועס ושל המאמן שלו דוד אוחנה (זאב רווח האגדי)',
     'הנושאים והימים להם הוא מתאים: גזענות, עלייה, זכויות אדם, יום רבין, זהות ישראלית, הכלה והשתלבות, מאבק באלימות.',
     'המלצת מפמ"רית תחום קולנוע משרד החינוך לשכבות ז-יב'
-    ]} trailerSrc='/whitepanthertrailer.mp4' 
+    ]} trailerSrc='/whitepanthertrailer.mp4' proofs={[{
+        title: 'סרט פנתר לבן',
+        media: {type: 'image', src:'/whitepanther1.jpg', text: ''},
+        text: 'סרט פנתר לבן לחצו לכפתור הסרט לפרס סרטי הטוב ביותר באוסקר הישראלי.'
+        
+    }]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
 }
