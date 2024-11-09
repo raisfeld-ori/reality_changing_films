@@ -112,7 +112,7 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
             width={500}
             height={500}
             draggable={false}
-            className="rounded-lg object-contain h-1/2 max-w-72"
+            className="rounded-lg object-contain h-full w-svw max-w-screen-lg"
           />
         )
       case 'link':
@@ -154,7 +154,7 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
             onDragEnd={handleDragEnd}
             className="absolute w-full h-full touch-none flex items-center justify-center"
           >
-            <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm mt-20">
+            <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-screen-md mt-20">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4 w-full flex justify-center">
                   {renderMedia(proofs[currentReview].media)}
