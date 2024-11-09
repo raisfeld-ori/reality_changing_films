@@ -118,7 +118,7 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
       case 'link':
         return (
           <Link href={media.src} target='_blank' className="h-1/2 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
-            {media.image ? <Image src={media.image} alt={media.text} height={200} width={100} className='h-full w-full' draggable={false} /> : text}
+            {media.image ? <Image src={media.image} alt={media.text} height={200} width={100} className='h-full w-full' draggable={false} /> : media.text}
           </Link>
         )
       case 'video':
