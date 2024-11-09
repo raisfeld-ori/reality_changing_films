@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["picsum.photos", "vimdeo.com"],
+        domains: ["picsum.photos", "vimeo.com"],
     }
 };
 
