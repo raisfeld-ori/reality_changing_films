@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Clipboard, Laugh, Play, Tv,  } from 'lucide-react'
+import { Laugh, Play, Tv,  } from 'lucide-react'
 
 export interface Content {
   title: string
