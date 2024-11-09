@@ -6,11 +6,11 @@ export default function Page(){
     ' סרט המספר את המסע לאליפות של אלקס, נער זועם וכועס ושל המאמן שלו דוד אוחנה (זאב רווח האגדי)',
     'הנושאים והימים להם הוא מתאים: גזענות, עלייה, זכויות אדם, יום רבין, זהות ישראלית, הכלה והשתלבות, מאבק באלימות.',
     'המלצת מפמ"רית תחום קולנוע משרד החינוך לשכבות ז-יב'
-    ]} trailerSrc='/whitepanthertrailer.mp4' content={[
+    ]} trailerSrc='/whitepanthertrailer.mp4' reviews={[
         {
-            title: '',
+            title: 'המלצות לפנתר לבן',
             text: '',
-            media: {type: 'link', src:'/whitepanther1.jpg', text: ''},
+            media: {type: 'image', src:'/whitepantherreccomended.png', text: ''},
         }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
