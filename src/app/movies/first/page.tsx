@@ -11,6 +11,16 @@ export default function Page(){
             title: 'המלצות לפנתר לבן',
             text: '',
             media: {type: 'image', src:'/whitepantherreccomended.png', text: ''},
+        },
+        {
+            title: 'ביקורת מ' + "Ynet",
+            text: '',
+            media: {type: 'image', src: '/adReview.JPG', text: ''},
+        },
+        {
+            title: 'לינק לכתבה מהחדשות',
+            text: 'לכניסה לכתבה',
+            media: {type: 'link', src: 'https://vimeo.com/460178007?share=copy', text: ''},
         }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
