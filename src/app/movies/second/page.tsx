@@ -38,6 +38,22 @@ export default function Page(){
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
             media: {type: 'image', src: '/dontwaitformereview (4).png', text: 'לצפייה בכתבה', image: ''},
         },
+    ]} content={[
+    {
+        title: 'ערב טוב עם גי פינס',
+        text: 'מתוך ערב טוב עם גאי פינס',
+        media: {type: 'image', src: 'https://vimeo.com/914129830?share=copy', text: '', image: '/introreviewidkrah (2).png'},
+    },
+    {
+        title: 'ביקורת על הסרט',
+        text: '',
+        media: {type: 'image', src: 'https://www.seret.co.il/critics/moviereviews.asp?id=2754', text: '', image: '/introreviewidkrah (1).png'},
+    },
+    {
+        title: 'כתבו על הסרט והפעילות שלנו',
+        text: "מתוך הקרנה ופעילות בבין תחומי בצפת",
+        media: {type: 'image', src: '', text: '', image: '/katavawow.png'},
+    }
     ]}
         backgroundImageSrc='/dontwaitforme.jpg'></Movie>
 }
