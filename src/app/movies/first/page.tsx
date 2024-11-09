@@ -31,12 +31,12 @@ export default function Page(){
         {
             title: 'כתבו לנו מורים ותלמידים',
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
-            media: {type: 'image', src: '/examples.png', text: 'לצפייה בכתבה', image: '/studentreview1.png'},
+            media: {type: 'image', src: '/studentreview1.png', text: 'לצפייה בכתבה', image: ''},
         },
         {
             title: 'כתבו לנו מורים ותלמידים',
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
-            media: {type: 'image', src: '/examples.png', text: 'לצפייה בכתבה', image: '/teacherreview.png'},
+            media: {type: 'image', src: '/teacherreview.png', text: 'לצפייה בכתבה', image: ''},
         }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
