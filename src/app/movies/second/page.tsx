@@ -7,11 +7,37 @@ export default function Page(){
         "נושאים: מאבק באלימות, זהות ישראלית, זכויות אדם, יום רבין, הכלה והשלבות קבלת החלטות, מעברים (חטיבה לתיכון), חוסן והתמודדות",
         "גרסאות וסדנאות מותאמות שכבת גיל ט-יב",
         "הומלץ על ידי שרת החינוך ד\"ר יפעת שאשא ביטון"
-    ]} trailerSrc='/dontwaitformevideo.mp4' content={[{
-        title: 'סרט פנתר לבן',
-        media: {type: 'image', src:'/whitepanther1.jpg', text: ''},
-        text: 'סרט פנתר לבן לחצו לכפתור הסרט לפרס סרטי הטוב ביותר באוסקר הישראלי.'
-        
-    }]}
+    ]} trailerSrc='/dontwaitformevideo.mp4' reviews={[
+        {
+            title: 'המלצת שרת החינוך',
+            text: "דוקטור יפעת שאשא ביטון",
+            media: {type: 'image', src: '/reccomendedsaratchinoch.png', text: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/dontwaitformereview.png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/dontwaitformereview (1).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/dontwaitformereview (2).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/dontwaitformereview (3).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/dontwaitformereview (4).png', text: 'לצפייה בכתבה', image: ''},
+        },
+    ]}
         backgroundImageSrc='/dontwaitforme.jpg'></Movie>
 }
