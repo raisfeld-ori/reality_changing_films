@@ -42,7 +42,57 @@ export default function Page(){
             title: 'כתבו לנו מורים ותלמידים',
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
             media: {type: 'image', src: '/morereviewyipee.png', text: 'לצפייה בכתבה', image: ''},
-        }
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (1).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (2).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (3).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (4).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (5).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (6).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (7).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (8).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (9).png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/moremessagesRAH (10).png', text: 'לצפייה בכתבה', image: ''},
+        },
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
 }

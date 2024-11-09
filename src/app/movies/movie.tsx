@@ -35,7 +35,7 @@ export default function MovieShowcase({
     >
       {showContents && !!content && content.length > 0 && <SwipeableReviewCard proofs={content}></SwipeableReviewCard>}
       {showReviews && !!reviews && reviews.length > 0 && <SwipeableReviewCard proofs={reviews}></SwipeableReviewCard>}
-      {(showContents || showReviews) && <div onClick={() => {setShowContents(false); setShowReviews(false);}} className='w-svw h-svh bg-black opacity-50 absolute z-20'></div>}
+      {(showContents || showReviews) && <div onClick={() => {setShowContents(false); setShowReviews(false);}} className='w-svw h-full bg-black opacity-50 absolute z-20'></div>}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10 text-white text-center max-w-4xl px-4 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
