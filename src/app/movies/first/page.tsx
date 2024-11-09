@@ -37,6 +37,11 @@ export default function Page(){
             title: 'כתבו לנו מורים ותלמידים',
             text: 'חלק ממאות ההודעות שאנחנו מקבלים',
             media: {type: 'image', src: '/teacherreview.png', text: 'לצפייה בכתבה', image: ''},
+        },
+        {
+            title: 'כתבו לנו מורים ותלמידים',
+            text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+            media: {type: 'image', src: '/morereviewyipee.png', text: 'לצפייה בכתבה', image: ''},
         }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
