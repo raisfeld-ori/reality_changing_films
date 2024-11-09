@@ -16,7 +16,7 @@ const heroContent: {video: string, title: string, description: string}[] = [
   },
   {
     video: "/movie clip2.mp4",
-    title: "מומלצי משרד החינוך, הגפן וסל תרבות",
+    title: "מומלץ משרד החינוך, הגפן וסל תרבות",
     description: ""
   },
   {
