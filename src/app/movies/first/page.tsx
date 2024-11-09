@@ -20,7 +20,7 @@ export default function Page(){
         {
             title: 'לינק לכתבה מהחדשות',
             text: '',
-            media: {type: 'link', src: 'https://vimeo.com/460178007?share=copy', text: 'לצפייה בכתבה'},
+            media: {type: 'link', src: 'https://vimeo.com/460178007?share=copy', text: 'לצפייה בכתבה', image: '/videoReviewIntro.png'},
         }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>

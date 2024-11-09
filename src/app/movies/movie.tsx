@@ -6,7 +6,7 @@ import { Laugh, Play, Tv,  } from 'lucide-react'
 export interface Content {
   title: string
   text: string
-  media: { type: 'image' | 'video' | 'link', src: string, text: string }
+  media: { type: 'image' | 'video' | 'link', src: string, text: string, image?: string }
 }
 
 interface MovieShowcaseProps {
@@ -117,8 +117,8 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
         )
       case 'link':
         return (
-          <Link href={media.src} target='_blank' className="h-20 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
-            {media.text}
+          <Link href={media.src} target='_blank' className="h-1/2 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
+            {media.image ? <Image src={media.image} alt={media.text} height={200} width={100} className='h-full w-full' draggable={false} /> : text}
           </Link>
         )
       case 'video':
