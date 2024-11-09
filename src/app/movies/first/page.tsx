@@ -22,6 +22,12 @@ export default function Page(){
             text: 'לחץ על הכתבה בשביל לראות',
             media: {type: 'link', src: 'https://vimeo.com/460178007?share=copy', text: 'לצפייה בכתבה', image: '/videoReviewIntro.png'},
         }
+    ]} reviews={[
+        {
+            title: 'המלצת מפמ"רית',
+            text: "המלצת מפקחת תחום קולנוע משרד החינוך",
+            media: {type: 'image', src: '/recommendedbymafmar.png', text: ''},
+        }
     ]}
         backgroundImageSrc='/whitepanther.jpg'></Movie>
 }
