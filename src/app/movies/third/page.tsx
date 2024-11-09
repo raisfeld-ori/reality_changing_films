@@ -6,7 +6,7 @@ export default function Page(){
         "נושאים: זהות ישראלית, מיניות בריאה, קבחת החלטות, אמונה וחוסן",
         "גרסאות וסדנאות מותאמות שכבת גיל י-יב",
 
-    ]} trailerSrc='/middlelifetrailer.mp4' proofs={[{
+    ]} trailerSrc='/middlelifetrailer.mp4' content={[{
         title: 'סרט פנתר לבן',
         media: {type: 'image', src:'/whitepanther1.jpg', text: ''},
         text: 'סרט פנתר לבן לחצו לכפתור הסרט לפרס סרטי הטוב ביותר באוסקר הישראלי.'

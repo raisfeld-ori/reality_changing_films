@@ -7,7 +7,7 @@ export default function Page(){
         "נושאים: מאבק באלימות, זהות ישראלית, זכויות אדם, יום רבין, הכלה והשלבות קבלת החלטות, מעברים (חטיבה לתיכון), חוסן והתמודדות",
         "גרסאות וסדנאות מותאמות שכבת גיל ט-יב",
         "הומלץ על ידי שרת החינוך ד\"ר יפעת שאשא ביטון"
-    ]} trailerSrc='/dontwaitformevideo.mp4' proofs={[{
+    ]} trailerSrc='/dontwaitformevideo.mp4' content={[{
         title: 'סרט פנתר לבן',
         media: {type: 'image', src:'/whitepanther1.jpg', text: ''},
         text: 'סרט פנתר לבן לחצו לכפתור הסרט לפרס סרטי הטוב ביותר באוסקר הישראלי.'
