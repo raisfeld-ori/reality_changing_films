@@ -27,13 +27,15 @@ export default function MovieShowcase({
   reviews = [],
 }: MovieShowcaseProps) {
   const [showContents, setShowContents] = useState(false);
+  const [showReviews, setShowReviews] = useState(false);
   return (
     <div 
       className="relative w-full h-screen bg-contain bg-center flex items-center justify-center overflow-x-hidden"
       style={{ backgroundImage: `url(${backgroundImageSrc})` }}
     >
       {showContents && !!content && content.length > 0 && <SwipeableReviewCard proofs={content}></SwipeableReviewCard>}
-      {showContents && !!content && content.length > 0 && <div onClick={() => setShowContents(false)} className='w-svw h-svh bg-black opacity-50 absolute z-20'></div>}
+      {showReviews && !!reviews && reviews.length > 0 && <SwipeableReviewCard proofs={reviews}></SwipeableReviewCard>}
+      {(showContents || showReviews) && <div onClick={() => setShowContents(false)} className='w-svw h-svh bg-black opacity-50 absolute z-20'></div>}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10 text-white text-center max-w-4xl px-4 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
@@ -55,7 +57,7 @@ export default function MovieShowcase({
           מן התקשורת
         </button>}
         {!!reviews && reviews.length > 0 && <button
-          onClick={() => setShowContents(true)}
+          onClick={() => setShowReviews(true)}
           className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
           <Laugh size={24} className="mr-2" />
