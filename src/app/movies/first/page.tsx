@@ -19,7 +19,7 @@ export default function Page(){
         },
         {
             title: 'לינק לכתבה מהחדשות',
-            text: '',
+            text: 'לחץ על הכתבה בשביל לראות',
             media: {type: 'link', src: 'https://vimeo.com/460178007?share=copy', text: 'לצפייה בכתבה', image: '/videoReviewIntro.png'},
         }
     ]}
