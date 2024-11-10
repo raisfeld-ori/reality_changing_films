@@ -52,7 +52,7 @@ export default function Page(){
     {
         title: 'ביקורת על הסרט',
         text: '',
-        media: {type: 'link', src: 'https://www.seret.co.il/critics/moviereviews.asp?id=2754', text: '', image: '/moremessagesRAH (13).png'},
+        media: {type: 'link', src: 'https://www.seret.co.il/critics/moviereviews.asp?id=2754', text: '', image: '/introreviewidkrah (1).png'},
     },
     {
         title: 'כתבו על הסרט והפעילות שלנו',
