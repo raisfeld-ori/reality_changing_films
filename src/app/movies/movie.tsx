@@ -60,7 +60,7 @@ export default function MovieShowcase({
       </div>
     </div>
   )
-}import { useState, useRef, useEffect, SetStateAction, Dispatch } from 'react'
+}import { useState, useRef, SetStateAction, Dispatch } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
