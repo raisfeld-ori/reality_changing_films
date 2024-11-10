@@ -1,5 +1,6 @@
 "use client"
 
+
 export default function Home() {
   return (
     <DynamicFilmHero />
@@ -61,7 +62,6 @@ function DynamicFilmHero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
       <video
         key={currentContent.video}
         autoPlay
@@ -74,21 +74,20 @@ function DynamicFilmHero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-0" />
+      <div className="absolute inset-0 h-full w-full top-0 left-0 z-20 bg-black bg-opacity-20" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-svw items-center justify-center md:justify">
         <div className="w-full px-6 text-right">
           <h1 
-            className={`mb-4 font-serif text-6xl font-bold text-white transition-opacity tinos-regular duration-500 sm:text-6xl text-center md:text-center ${
+            className={`mb-4 font-serif text-6xl z-10 font-bold text-white transition-opacity tinos-regular duration-500 sm:text-6xl text-center md:text-center ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
             {currentContent.title}
           </h1>
           <p 
-            className={`ml-auto w-full text-2xl text-gray-200 transition-opacity tinos-regular duration-500 text-center md:text-center ${
+            className={`ml-auto w-full text-2xl z-10 text-gray-200 transition-opacity tinos-regular duration-500 text-center md:text-center ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
