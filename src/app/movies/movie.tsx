@@ -205,7 +205,7 @@ function SwipeableReviewCard({ proofs = defaultProofs, showItems }: { proofs?: C
         )
       case 'link':
         return (
-          <Link href={media.src} target='_blank' className="h-36 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
+          <Link href={media.src} target='_blank' className="w-full bg-white border-2 text-blue-600 rounded-lg h-96 flex items-center justify-center hover:underline">
             {media.image ? <Image src={media.image} alt={media.text || ''} height={200} width={100} className='h-full w-full' draggable={false} /> : media.text}
           </Link>
         )
