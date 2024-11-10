@@ -7,7 +7,7 @@ export default function Page(){
         "נושאים: מאבק באלימות, זהות ישראלית, זכויות אדם, יום רבין, הכלה והשלבות קבלת החלטות, מעברים (חטיבה לתיכון), חוסן והתמודדות",
         "גרסאות וסדנאות מותאמות שכבת גיל ט-יב",
         "הומלץ על ידי שרת החינוך ד\"ר יפעת שאשא ביטון"
-    ]} trailerSrc='https://vimeo.com/790375522?share=copy' reviews={[
+    ]} trailerSrc='https://vimeo.com/1028010416?share=copy' reviews={[
         {
             title: 'המלצת שרת החינוך',
             text: "דוקטור יפעת שאשא ביטון",
@@ -42,17 +42,22 @@ export default function Page(){
     {
         title: 'ערב טוב עם גי פינס',
         text: 'מתוך ערב טוב עם גאי פינס',
-        media: {type: 'image', src: 'https://vimeo.com/914129830?share=copy', text: '', image: '/introreviewidkrah (2).png'},
+        media: {type: 'link', src: 'https://vimeo.com/914129830?share=copy', text: '', image: '/name.png'},
+    },
+    {
+        title: 'כתבו לנו מורים ותלמידים',
+        text: 'חלק ממאות ההודעות שאנחנו מקבלים',
+        media: {type: 'image', src: '/dontwaitformereview (3).png', text: 'לצפייה בכתבה', image: ''},
     },
     {
         title: 'ביקורת על הסרט',
         text: '',
-        media: {type: 'image', src: 'https://www.seret.co.il/critics/moviereviews.asp?id=2754', text: '', image: '/introreviewidkrah (1).png'},
+        media: {type: 'link', src: 'https://www.seret.co.il/critics/moviereviews.asp?id=2754', text: '', image: '/moremessagesRAH (13).png'},
     },
     {
         title: 'כתבו על הסרט והפעילות שלנו',
         text: "מתוך הקרנה ופעילות בבין תחומי בצפת",
-        media: {type: 'image', src: '', text: '', image: '/katavawow.png'},
+        media: {type: 'image', text: '', src: '/katavawow.png'},
     }
     ]}
         backgroundImageSrc='/dontwaitforme.jpg'></Movie>

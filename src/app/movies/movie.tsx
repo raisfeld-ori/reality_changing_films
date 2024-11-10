@@ -30,22 +30,20 @@ export default function MovieShowcase({
   const [showReviews, setShowReviews] = useState(false);
   return (
     <div 
-      className="relative w-full h-screen bg-contain bg-center flex items-center justify-center overflow-x-hidden"
+      className="relative min-h-screen bg-contain bg-center flex items-center justify-center overflow-x-hidden"
       style={{ backgroundImage: `url(${backgroundImageSrc})` }}
     >
       {showContents && !!content && content.length > 0 && <SwipeableReviewCard proofs={content}></SwipeableReviewCard>}
       {showReviews && !!reviews && reviews.length > 0 && <SwipeableReviewCard proofs={reviews}></SwipeableReviewCard>}
-      {(showContents || showReviews) && <div onClick={() => {setShowContents(false); setShowReviews(false);}} className='w-svw h-full bg-black opacity-50 absolute z-20'></div>}
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10 text-white text-center max-w-4xl px-4 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
-        <p className="text-lg md:text-xl mb-8">{description.map((p) => <p key={p}>{p}<br></br></p>)}</p>
-        <div className='flex flex-row gap-4'>
+        <div className="text-lg md:text-xl mb-8">{description.map((p) => <p key={p}>{p}<br></br></p>)}</div>
+        <div className='flex flex-col md:flex-row gap-4'>
         <Link href={trailerSrc} target="_blank">
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center w-64 justify-center transition duration-300"
         >
-          <Play size={24} className="mr-2" />
+          <Play size={24} className="mr-2 ml-2" />
           לצפייה בטריילר
         </button>
         </Link>
@@ -60,7 +58,7 @@ export default function MovieShowcase({
           onClick={() => setShowReviews(true)}
           className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
-          <Laugh size={24} className="mr-2" />
+          <Laugh size={24} className="mr-2 ml-2" />
           המלצות
         </button>}
         </div>
@@ -112,12 +110,12 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
             width={500}
             height={500}
             draggable={false}
-            className="rounded-lg object-contain h-full w-svw max-w-screen-lg"
+            className="rounded-lg object-contain h-full w-svw max-w-xl"
           />
         )
       case 'link':
         return (
-          <Link href={media.src} target='_blank' className="h-1/2 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
+          <Link href={media.src} target='_blank' className="h-36 w-full bg-white border-2 border-blue-600 text-blue-600 rounded-lg flex items-center justify-center hover:underline">
             {media.image ? <Image src={media.image} alt={media.text} height={200} width={100} className='h-full w-full' draggable={false} /> : media.text}
           </Link>
         )
@@ -134,8 +132,8 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
   }
 
   return (
-    <div className="flex items-center justify-center absolute min-h-screen w-full">
-      <div className="relative w-full h-full z-30 max-w-md mx-auto">
+    <div className="flex items-end justify-center mt-44 mb-24 absolute min-h-screen w-full h-full">
+      <div className="relative w-full h-full z-30 max-w-lg mx-auto">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentReview}
@@ -154,7 +152,7 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
             onDragEnd={handleDragEnd}
             className="absolute w-full h-full touch-none flex items-center justify-center"
           >
-            <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-screen-md mt-20">
+            <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-screen-md">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4 w-full flex justify-center">
                   {renderMedia(proofs[currentReview].media)}
@@ -163,9 +161,7 @@ function SwipeableReviewCard({ proofs }: { proofs: Content[] }) {
               </div>
               <p className="text-gray-700 mb-4 text-center">{proofs[currentReview].text}</p>
               <div className="text-sm text-gray-500 text-center">
-                <p className="mt-2">
                   {currentReview + 1} / {proofs.length}
-                </p>
               </div>
             </div>
           </motion.div>
