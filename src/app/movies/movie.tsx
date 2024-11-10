@@ -60,7 +60,7 @@ export default function MovieShowcase({
       </div>
     </div>
   )
-}import { useState, useRef, SetStateAction, Dispatch } from 'react'
+}import { useState, useRef, SetStateAction, Dispatch, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -110,7 +110,8 @@ function SwipeableReviewCard({ proofs = defaultProofs, showItems }: { proofs?: C
   const [direction, setDirection] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const fullscreenRef = useRef<HTMLDivElement>(null)
-
+  useEffect(() => document.addEventListener('fullscreenchange', () => setIsFullscreen(document.fullscreenElement !== null)), [])
+  useEffect(() => document.addEventListener('fullscreenerror', (e) => console.log('failed changing to full screen: ', e)), [])
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: { offset: { x: number } }) => {
     if (info.offset.x < -100 && currentReview < proofs.length - 1) {
       setDirection(1)
@@ -136,10 +137,12 @@ function SwipeableReviewCard({ proofs = defaultProofs, showItems }: { proofs?: C
     }),
   }
 
-  const toggleFullscreen = () => {
+  const toggleFullscreen = async () => {
     if (!isFullscreen) {
-      if (fullscreenRef.current?.requestFullscreen) {
-        fullscreenRef.current.requestFullscreen()
+      await fullscreenRef.current?.requestFullscreen();
+      //@ts-expect-error changes between browsers
+      if ((document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) && fullscreenRef.current) {
+        setIsFullscreen(true);
       }
     } else {
       if (document.exitFullscreen) {
@@ -148,7 +151,6 @@ function SwipeableReviewCard({ proofs = defaultProofs, showItems }: { proofs?: C
         });
       }
     }
-    setIsFullscreen(!isFullscreen)
   }
 
   const closeCard = () => {
