@@ -10,15 +10,15 @@ export default function Page(){
         {
             title: 'כתבה מ' + "Ynet",
             text: 'לחצו על התמונה בשביל ללמוד עוד',
-            media: {type: 'link', src: 'https://www.ynet.co.il/entertainment/article/hkdxgk007a', image: '/ynetreview.avif'}
+            media: {type: 'link', src: 'https://www.ynet.co.il/entertainment/article/hkdxgk007a', image: '/ynetreview.png'}
         },
         {
             title: 'כתבה מ' + "רשת 13",
             text: 'לחצו על התמונה בשביל ללמוד עוד',
-            media: {type: 'link', src: 'https://13tv.co.il/item/entertainment/cinema/hkd1j-904067224/', image: '/reshet13.webp'}
+            media: {type: 'link', src: 'https://13tv.co.il/item/entertainment/cinema/hkd1j-904067224/', image: '/middlelife.jpg'}
         },
         {
-            title: 'כתבה מ' + "רשת 13",
+            title: "מאחורי הקלעים",
             text: 'לחצו על התמונה בשביל ללמוד עוד',
             media: {type: 'link', src: 'https://www.youtube.com/watch?v=aOGXWzbEbZ0', image: '/behindthescenes.png'}
         },
