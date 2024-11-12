@@ -6,11 +6,22 @@ export default function Page(){
         "נושאים: זהות ישראלית, מיניות בריאה, קבחת החלטות, אמונה וחוסן",
         "גרסאות וסדנאות מותאמות שכבת גיל י-יב",
 
-    ]} trailerSrc='/middlelifetrailer.mp4' content={[{
-        title: 'סרט פנתר לבן',
-        media: {type: 'image', src:'/whitepanther1.jpg', text: ''},
-        text: 'סרט פנתר לבן לחצו לכפתור הסרט לפרס סרטי הטוב ביותר באוסקר הישראלי.'
-        
-    }]}
+    ]} trailerSrc='/middlelifetrailer.mp4' content={[
+        {
+            title: 'כתבה מ' + "Ynet",
+            text: 'לחצו על התמונה בשביל ללמוד עוד',
+            media: {type: 'link', src: 'https://www.ynet.co.il/entertainment/article/hkdxgk007a', image: '/ynetreview.avif'}
+        },
+        {
+            title: 'כתבה מ' + "רשת 13",
+            text: 'לחצו על התמונה בשביל ללמוד עוד',
+            media: {type: 'link', src: 'https://13tv.co.il/item/entertainment/cinema/hkd1j-904067224/', image: '/reshet13.webp'}
+        },
+        {
+            title: 'כתבה מ' + "רשת 13",
+            text: 'לחצו על התמונה בשביל ללמוד עוד',
+            media: {type: 'link', src: 'https://www.youtube.com/watch?v=aOGXWzbEbZ0', image: '/behindthescenes.png'}
+        },
+    ]}
         backgroundImageSrc='/middlelife.jpg'></Movie>
 }
