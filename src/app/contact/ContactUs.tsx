@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react"
 import { Mail, Phone } from "lucide-react"
 import SendMessage from "./SendMessage"
+import Image from "next/image"
 
 export default function ContactUs() {
   const [name, setName] = useState("")
@@ -94,8 +95,19 @@ export default function ContactUs() {
               <a href="mailto:hilaraisfeld@gmail.com" className="text-gray-700 hover:text-blue-600">hilaraisfeld@gmail.com</a>
             </div>
             <div className="flex items-center">
+              <Mail className="w-6 h-6 text-blue-600 ml-2" />
+              <a href="mailto:hilaraisfeld@gmail.com" className="text-gray-700 hover:text-blue-600">dani.raisfeld@gmail.com</a>
+            </div>
+            <div className="flex items-center">
               <Phone className="w-6 h-6 text-blue-600 ml-2" />
               <span className="text-gray-700" dir="ltr">+972 50-355-5074</span>
+            </div>
+            <div className="flex items-center">
+              <Phone className="w-6 h-6 text-blue-600 ml-2" />
+              <span className="text-gray-700" dir="ltr">+972 50-724-3876</span>
+            </div>
+            <div className="flex items-center justify-center">
+            <Image src={'/contact.jpg'} width={250} height={250} alt="contact"></Image>
             </div>
           </div>
         </div>
