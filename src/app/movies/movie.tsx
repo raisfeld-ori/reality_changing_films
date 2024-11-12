@@ -9,6 +9,7 @@ interface MovieShowcaseProps {
   backgroundImageSrc: string
   content?: Content[]
   reviews?: Content[]
+  newMovie?: boolean
 }
 
 export default function MovieShowcase({
@@ -17,6 +18,7 @@ export default function MovieShowcase({
   trailerSrc = "https://www.example.com/interstellar-trailer.mp4",
   backgroundImageSrc = "https://example.com/interstellar-background.jpg",
   content = [],
+  newMovie = false,
   reviews = [],
 }: MovieShowcaseProps) {
   const [showContents, setShowContents] = useState(false);
@@ -31,6 +33,7 @@ export default function MovieShowcase({
       {showContents && !!content && content.length > 0 && <SwipeableReviewCard showItems={setShowContents} proofs={content}></SwipeableReviewCard>}
       {showReviews && !!reviews && reviews.length > 0 && <SwipeableReviewCard showItems={setShowReviews} proofs={reviews}></SwipeableReviewCard>}
       <div className="relative z-10 text-white font-bold text-center max-w-4xl px-4 flex flex-col items-center">
+      {newMovie && <span className='ml-60 md:ml-[25.5rem] rotate-12 text-xl text-yellow-500 text-right'>חדש מהקולנוע!</span>}
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
         <div className="text-md md:text-2xl mb-8">{description.map((p) => <p key={p}>{p}<br></br></p>)}</div>
         <div className='flex flex-col md:flex-row gap-4'>

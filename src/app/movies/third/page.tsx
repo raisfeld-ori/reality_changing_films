@@ -5,8 +5,7 @@ export default function Page(){
         'סיפור על ישראליות, אחדות, אהבה, תשוקה, ואמונה הסוחפת אותך באמצע החיים.',
         "נושאים: זהות ישראלית, מיניות בריאה, קבחת החלטות, אמונה וחוסן",
         "גרסאות וסדנאות מותאמות שכבת גיל י-יב",
-
-    ]} trailerSrc='/middlelifetrailer.mp4' content={[
+    ]} trailerSrc='/middlelifetrailer.mp4' newMovie={true} content={[
         {
             title: 'כתבה מ' + "Ynet",
             text: 'לחצו על התמונה בשביל ללמוד עוד',
