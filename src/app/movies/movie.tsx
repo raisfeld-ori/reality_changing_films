@@ -66,7 +66,7 @@ export default function MovieShowcase({
           className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
           <School2 size={24} className="mr-2 ml-2" />
-          מערכי שיעור
+          מערך שיעור
         </a>}
         </div>
       </div>
