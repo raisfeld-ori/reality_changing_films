@@ -1,6 +1,6 @@
 'use client'
 
-import { Laugh, Play, Tv,  } from 'lucide-react'
+import { Laugh, Play, School2, Tv,  } from 'lucide-react'
 
 interface MovieShowcaseProps {
   title: string
@@ -8,6 +8,7 @@ interface MovieShowcaseProps {
   trailerSrc: string
   backgroundImageSrc: string
   content?: Content[]
+  extraFile?: string
   reviews?: Content[]
   newMovie?: boolean
 }
@@ -18,6 +19,7 @@ export default function MovieShowcase({
   trailerSrc = "https://www.example.com/interstellar-trailer.mp4",
   backgroundImageSrc = "https://example.com/interstellar-background.jpg",
   content = [],
+  extraFile = '',
   newMovie = false,
   reviews = [],
 }: MovieShowcaseProps) {
@@ -34,7 +36,7 @@ export default function MovieShowcase({
       {showReviews && !!reviews && reviews.length > 0 && <SwipeableReviewCard showItems={setShowReviews} proofs={reviews}></SwipeableReviewCard>}
       <div className="relative z-10 text-white font-bold text-center max-w-4xl px-4 flex flex-col items-center">
       {newMovie && <span className='ml-60 md:ml-[25.5rem] rotate-12 text-xl text-yellow-500 text-right'>חדש מהקולנוע!</span>}
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">{title}</h1>
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 mt-20">{title}</h1>
         <div className="text-md md:text-2xl mb-8">{description.map((p) => <p key={p}>{p}<br></br></p>)}</div>
         <div className='flex flex-col md:flex-row gap-4'>
         <Link href={trailerSrc} target="_blank">
@@ -59,6 +61,13 @@ export default function MovieShowcase({
           <Laugh size={24} className="mr-2 ml-2" />
           המלצות
         </button>}
+        {!!extraFile && <a
+          href={extraFile} target='_blank'
+          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
+        >
+          <School2 size={24} className="mr-2 ml-2" />
+          מערכי שיעור
+        </a>}
         </div>
       </div>
     </div>

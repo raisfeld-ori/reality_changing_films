@@ -5,7 +5,7 @@ export default function Page(){
         "הסרט מספר סיפור עוצמתי על ישראליות, אחדות, אהבה, תשוקה ואמונה, ומוביל אותך למסע מרגש באמצע החיים.",
         "נושאים עיקריים: זהות ישראלית, מיניות בריאה, קבלת החלטות, אמונה וחוסן אישי.",
         "הסרט מציע גרסאות וסדנאות מותאמות לשכבות גיל י'-יב."
-      ]} trailerSrc='/middlelifetrailer.mp4' newMovie={true} content={[
+      ]} extraFile='/content.pdf' trailerSrc='/middlelifetrailer.mp4' newMovie={true} content={[
         {
             title: 'כתבה מ' + "Ynet",
             text: 'לחצו על התמונה בשביל ללמוד עוד',
