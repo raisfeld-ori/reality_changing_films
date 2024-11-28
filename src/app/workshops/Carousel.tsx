@@ -17,7 +17,7 @@ export default function Component() {
   }, [])
 
   return (
-    <div className="relative w-screen h-full mt-24 md:mt-0 overflow-hidden bg-white">
+    <div className="relative w-screen h-full min-h-52 mt-24 md:mt-0 overflow-hidden bg-white">
       {images.map((src, index) => (
         <div
           key={src}
