@@ -15,7 +15,7 @@ export default function Component() {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center">
         <Link href={'/contact'}
-          className="px-8 py-3 bg-blue-600 text-white text-lg mb-5 font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          className="px-8 py-3 bg-blue-600 text-white text-lg mb-5 md:mb-0 md:mr-5 md:ml-5 font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
         >
           דברו איתנו
         </Link>
