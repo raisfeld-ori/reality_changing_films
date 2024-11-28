@@ -13,7 +13,7 @@ export default function Component() {
         <p className="text-lg md:text-2xl text-gray-700 leading-relaxed mb-12">
         הסדנה מציעה למשתתפים חוויה יצירתית שמבוססת על ביטוי עצמי דרך משחק. לכל הקרנה אנו מביאים מצלמת קולנוע וציוד מקצועי. התלמידים עולים על הבמה ומבצעים סצנות שמתארות מצבים מהחיים והדילמות האישיות שלהם, כאשר הם מצולמים מול הקהל. נושאים כמו חרם, קבלת החלטות, לחץ חברתי ועוד (בהתאם להסכמה עם בית הספר) נבחנים במהלך הסדנה. בסופה, הסצנות מוקרנות על מסך גדול לצלילי מחיאות הכפיים, ועותקים נמסרים לבית הספר כדי לשלוח להורים.
         </p>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center">
         <Link href={'/contact'}
           className="px-8 py-3 bg-blue-600 text-white text-lg mb-5 font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
         >
