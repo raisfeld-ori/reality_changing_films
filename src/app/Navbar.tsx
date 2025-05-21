@@ -55,6 +55,12 @@ export default function Navbar() {
               >
                 אמצע החיים
               </Link>
+                            <Link
+                href="/movies/fourth"
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
+              >
+                פעילות יום השואה
+              </Link>
               <Link
                 href="/workshops"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
@@ -144,8 +150,22 @@ export default function Navbar() {
                   className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
                   onClick={closeMobileMenu}
                 >
+                  אמצע החיים
+                </Link>
+                                <Link
+                  href="/movies/third"
+                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
+                  onClick={closeMobileMenu}
+                >
                   
                   אמצע החיים
+                </Link>
+                <Link
+                  href="/movies/fourth"
+                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
+                  onClick={closeMobileMenu}
+                >
+                  פעילות יום השואה
                 </Link>
               <Link
                 href="/workshops"
