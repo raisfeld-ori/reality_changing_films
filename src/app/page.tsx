@@ -1,111 +1,372 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
+import { Play, Users, Award, Heart, Star, ArrowLeft, BookOpen, Shield, Globe } from "lucide-react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import type { ReactNode } from "react"
 
-// Film data
-const films = [
-  {
-    id: 1,
-    title: "פנתר לבן",
-    image: "/whitepanther.jpg",
-    link: "/movies/first",
-  },
-  {
-    id: 2,
-    title: "אל תחכי לי",
-    image: "/dontwaitforme.jpg",
-    link: "/movies/second",
-  },
-  {
-    id: 3,
-    title: "אמצע החיים",
-    image: "/middlelife.jpg",
-    link: "/movies/third",
-  },
-]
+// Custom Button Component
+interface ButtonProps {
+  children: ReactNode
+  size?: "default" | "lg"
+  variant?: "default" | "outline"
+  className?: string
+  onClick?: () => void
+}
 
-export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+function CustomButton({ children, size = "default", variant = "default", className = "", onClick }: ButtonProps) {
+  const baseClasses =
+    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none"
 
-  // Function to go to the next slide
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % films.length)
+  const sizeClasses = {
+    default: "h-10 py-2 px-4",
+    lg: "h-11 px-8 py-3 text-lg",
   }
 
-  // Function to go to the previous slide
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + films.length) % films.length)
+  const variantClasses = {
+    default: "bg-blue-600 text-white hover:bg-blue-700",
+    outline: "border border-gray-300 bg-transparent hover:bg-gray-50",
   }
-
-  // Function to go to a specific slide
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index)
-  }
-
-  // Auto-slide effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 4500)
-
-    return () => clearInterval(interval)
-  }, [])
 
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-black text-white">
-      {/* Carousel container */}
-      <div className="absolute inset-0 w-full h-full">
-        {films.map((film, index) => (
-                        <Link
-                href={film.link}
-                className="inline-flex items-center justify-center rounded-md bg-white px-6 py-3 text-lg font-medium text-black transition-colors hover:bg-gray-200 w-fit"
-              >
-          <div
-            key={film.id}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-out ${
-              currentIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
-          >
-            <Image src={film.image} alt={film.title} fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 sm:p-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white text-center">{film.title}</h2>
+    <button className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`} onClick={onClick}>
+      {children}
+    </button>
+  )
+}
+
+// Custom Card Components
+interface CardProps {
+  children: ReactNode
+  className?: string
+}
+
+interface CardContentProps {
+  children: ReactNode
+  className?: string
+}
+
+function CustomCard({ children, className = "" }: CardProps) {
+  return <div className={`rounded-lg border bg-white shadow-sm ${className}`}>{children}</div>
+}
+
+function CustomCardContent({ children, className = "" }: CardContentProps) {
+  return <div className={`p-6 ${className}`}>{children}</div>
+}
+
+// Custom Badge Component
+interface BadgeProps {
+  children: ReactNode
+  className?: string
+}
+
+function CustomBadge({ children, className = "" }: BadgeProps) {
+  return (
+    <div className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${className}`}>{children}</div>
+  )
+}
+
+export default function Page() {
+  return (
+    <div dir="rtl" className="min-h-screen bg-gradient-to-b from-blue-50 to-white font-sans">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 md:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <CustomBadge className="bg-blue-100 text-blue-800 hover:bg-blue-200">סרטים חינוכיים לשינוי</CustomBadge>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  בונים עולם
+                  <span className="text-blue-600"> כולל יותר </span>
+                  באמצעות קולנוע
+                </h1>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  אנו יוצרים סרטים חינוכיים חזקים שעוזרים לילדים להבין ולהילחם בגזענות, במיזוגיניה ובנושאים חברתיים
+                  אחרים. המשימה שלנו היא לטפח אמפתיה, הבנה ושינוי חיובי בדור הבא.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <CustomButton size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                  <Play className="ml-2 h-5 w-5" />
+                  צפו בסרטים שלנו
+                </CustomButton>
+                <CustomButton variant="outline" size="lg">
+                  למדו על המשימה שלנו
+                  <ArrowLeft className="mr-2 h-5 w-5" />
+                </CustomButton>
+              </div>
+              <div className="flex items-center gap-8 pt-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">50+</div>
+                  <div className="text-sm text-gray-600">סרטים חינוכיים</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">1M+</div>
+                  <div className="text-sm text-gray-600">ילדים שהושפעו</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-sm text-gray-600">בתי ספר שותפים</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/placeholder.svg?height=600&width=800"
+                  alt="ילדים צופים בסרט חינוכי"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <CustomButton
+                  size="lg"
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 text-gray-900 hover:bg-white"
+                >
+                  <Play className="ml-2 h-6 w-6" />
+                  צפו בדמו
+                </CustomButton>
+              </div>
             </div>
           </div>
-          </Link>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      {/* Navigation buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 z-20"
-        aria-label="Previous film"
-      >
-        <ChevronLeft className="h-8 w-8" />
-      </button>
+      {/* Featured Film Section */}
+      <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <CustomBadge className="bg-green-100 text-green-800 hover:bg-green-200 mb-4">הפקה חדשה</CustomBadge>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרט המומלץ: "הבנת ההבדלים"</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              הסרט החינוכי החדש שלנו עוזר לילדים בגילאי 8-12 להבין ולחגוג גיווניות תוך התמודדות עם תפיסות שגויות נפוצות
+              על גזע ומגדר.
+            </p>
+          </div>
 
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 z-20"
-        aria-label="Next film"
-      >
-        <ChevronRight className="h-8 w-8" />
-      </button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="relative rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="פוסטר הסרט הבנת ההבדלים"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <CustomButton size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+                    <Play className="ml-2 h-6 w-6" />
+                    צפו בטריילר
+                  </CustomButton>
+                </div>
+              </div>
+            </div>
 
-      {/* Indicator dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
-        {films.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={"h-3 w-3 rounded-full transition-all " + (currentIndex === index ? "bg-white w-8" : "bg-white/50")}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </main>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">תקציר הסרט</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  הצטרפו למאיה ואלכס כשהם מנווטים בבית הספר החדש שלהם ולומדים על הגיוון היפה בכיתה שלהם. באמצעות סיפור
+                  מרתק ודמויות שניתן להזדהות איתן, ילדים מגלים כיצד הבדלים הופכים אותנו לחזקים יותר ומדוע כל כך חשוב
+                  להתייחס לכולם בכבוד ובחביבות.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600">משך זמן</div>
+                  <div className="font-semibold">25 דקות</div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600">קבוצת גיל</div>
+                  <div className="font-semibold">8-12 שנים</div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600">נושאים</div>
+                  <div className="font-semibold">גיוון, כבוד</div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-sm text-gray-600">דירוג</div>
+                  <div className="font-semibold flex items-center">
+                    <Star className="h-4 w-4 text-yellow-400 ml-1" />
+                    4.9/5
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <CustomButton size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+                  <Play className="ml-2 h-5 w-5" />
+                  צפו עכשיו
+                </CustomButton>
+                <CustomButton variant="outline" size="lg">
+                  הורידו מדריך לימוד
+                  <BookOpen className="mr-2 h-5 w-5" />
+                </CustomButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="py-20 px-4 md:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ההשפעה שלנו על החינוך</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              ראו כיצד הסרטים החינוכיים שלנו עושים הבדל אמיתי בכיתות ובקהילות ברחבי העולם.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <CustomCard className="text-center p-8 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                  <Users className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">1.2M+</h3>
+                <p className="text-gray-600">תלמידים שחונכו</p>
+                <p className="text-sm text-gray-500">ילדים ברחבי העולם למדו על גיוון וכלילות באמצעות הסרטים שלנו</p>
+              </CustomCardContent>
+            </CustomCard>
+
+            <CustomCard className="text-center p-8 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                  <Award className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">15</h3>
+                <p className="text-gray-600">פרסים שזכינו</p>
+                <p className="text-sm text-gray-500">הכרה במצוינות בתוכן חינוכי ובהשפעה חברתית</p>
+              </CustomCardContent>
+            </CustomCard>
+
+            <CustomCard className="text-center p-8 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
+                  <Globe className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">45</h3>
+                <p className="text-gray-600">מדינות שהושפעו</p>
+                <p className="text-sm text-gray-500">הסרטים שלנו משמשים במערכות חינוך ברחבי הגלובוס</p>
+              </CustomCardContent>
+            </CustomCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">מה אומרים המחנכים</h2>
+            <p className="text-xl text-gray-600">שמעו ממורים והורים שראו את ההשפעה החיובית של הסרטים שלנו</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CustomCard className="p-6 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 italic">
+                  "הסרטים האלה שינו את הדרך שבה התלמידים שלי חושבים על גיוון. השיחות שאנחנו מנהלים אחרי הצפייה הן
+                  מדהימות."
+                </p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 font-semibold">שמ</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">שרה מרטינז</div>
+                    <div className="text-sm text-gray-600">מורה לכיתה ה', בית ספר לינקולן</div>
+                  </div>
+                </div>
+              </CustomCardContent>
+            </CustomCard>
+
+            <CustomCard className="p-6 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 italic">
+                  "כהורה, אני מעריך איך הסרטים האלה עוזרים לילדים שלי להבין נושאים חברתיים מורכבים בצורה מתאימה לגיל."
+                </p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 font-semibold">דג</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">דוד ג'ונסון</div>
+                    <div className="text-sm text-gray-600">הורה וחבר מועצת בית הספר</div>
+                  </div>
+                </div>
+              </CustomCardContent>
+            </CustomCard>
+
+            <CustomCard className="p-6 border-0 shadow-lg">
+              <CustomCardContent className="space-y-4">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 italic">
+                  "האיכות והערך החינוכי של הסרטים האלה יוצאי דופן. הם כעת חלק מתוכנית הלימודים הליבה שלנו."
+                </p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 font-semibold">רח</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">ד"ר רחל חן</div>
+                    <div className="text-sm text-gray-600">מנהלת תוכנית לימודים, בתי ספר מטרו</div>
+                  </div>
+                </div>
+              </CustomCardContent>
+            </CustomCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">מוכנים לעשות הבדל?</h2>
+              <p className="text-xl text-blue-100">
+                הצטרפו לאלפי מחנכים המשתמשים בסרטים שלנו ליצירת כיתות כוללות יותר. התחילו את המסע שלכם לקראת שינוי חיובי
+                היום.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CustomButton size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Shield className="ml-2 h-5 w-5" />
+                התחילו ניסיון חינם
+              </CustomButton>
+              <CustomButton
+                size="lg"
+                className="border border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+              >
+                <Heart className="ml-2 h-5 w-5" />
+                בקשו הדגמה
+              </CustomButton>
+            </div>
+
+            <p className="text-sm text-blue-200">לא נדרש כרטיס אשראי • ניסיון חינם ל-30 יום • ביטול בכל עת</p>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
