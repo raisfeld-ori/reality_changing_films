@@ -285,7 +285,7 @@ export default function Page() {
                     <span className="text-green-600 font-semibold">דג</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">דוד ג'ונסון</div>
+                    <div className="font-semibold text-gray-900">דוד ג&quot;ונסון</div>
                     <div className="text-sm text-gray-600">הורה וחבר מועצת בית הספר</div>
                   </div>
                 </div>
