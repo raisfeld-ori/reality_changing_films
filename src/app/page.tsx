@@ -2,6 +2,7 @@
 
 import { Play, Users, Award, Heart, Star, ArrowLeft, BookOpen, Shield, Globe } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
 // Custom Button Component
@@ -66,6 +67,7 @@ function CustomBadge({ children, className = "" }: BadgeProps) {
 }
 
 export default function Page() {
+  const router = useRouter();
   return (
     <div dir="rtl" className="min-h-screen bg-gradient-to-b from-blue-50 to-white font-sans">
       {/* Hero Section */}
@@ -74,38 +76,36 @@ export default function Page() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <CustomBadge className="bg-blue-100 text-blue-800 hover:bg-blue-200">סרטים חינוכיים לשינוי</CustomBadge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  בונים עולם
-                  <span className="text-blue-600"> כולל יותר </span>
-                  באמצעות קולנוע
+                  קולנוע
+                  <span className="text-blue-600"> משנה </span>
+                  מציאות
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  אנו יוצרים סרטים חינוכיים חזקים שעוזרים לילדים להבין ולהילחם בגזענות, במיזוגיניה ובנושאים חברתיים
-                  אחרים. המשימה שלנו היא לטפח אמפתיה, הבנה ושינוי חיובי בדור הבא.
+"קולנוע משנה מציאות" הוא מיזם חינוכי־אמנותי שמביא אל בתי הספר את הסרטים הכי נצפים בקרב תלמידי חטיבות הביניים והתיכונים בישראל.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CustomButton size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                <CustomButton size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => router.push("/movies")}>
                   <Play className="ml-2 h-5 w-5" />
-                  צפו בסרטים שלנו
+                  צפייה בפעילויות
                 </CustomButton>
-                <CustomButton variant="outline" size="lg">
-                  למדו על המשימה שלנו
+                <CustomButton variant="outline" size="lg" onClick={() => router.push("/about")}>
+                  למדו עוד עלינו
                   <ArrowLeft className="mr-2 h-5 w-5" />
                 </CustomButton>
               </div>
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">50+</div>
-                  <div className="text-sm text-gray-600">סרטים חינוכיים</div>
+                  <div className="text-2xl font-bold text-blue-600">20+</div>
+                  <div className="text-sm text-gray-600">שנים של ניסיון</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600">1M+</div>
                   <div className="text-sm text-gray-600">ילדים שהושפעו</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-2xl font-bold text-blue-600">200+</div>
                   <div className="text-sm text-gray-600">בתי ספר שותפים</div>
                 </div>
               </div>
@@ -113,20 +113,13 @@ export default function Page() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="ילדים צופים בסרט חינוכי"
+                  src="/contact.jpg"
+                  alt=""
                   width={800}
                   height={600}
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                <CustomButton
-                  size="lg"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 text-gray-900 hover:bg-white"
-                >
-                  <Play className="ml-2 h-6 w-6" />
-                  צפו בדמו
-                </CustomButton>
               </div>
             </div>
           </div>
@@ -138,10 +131,9 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <CustomBadge className="bg-green-100 text-green-800 hover:bg-green-200 mb-4">הפקה חדשה</CustomBadge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרט המומלץ: "הבנת ההבדלים"</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">יום השואה</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              הסרט החינוכי החדש שלנו עוזר לילדים בגילאי 8-12 להבין ולחגוג גיווניות תוך התמודדות עם תפיסות שגויות נפוצות
-              על גזע ומגדר.
+              פעילות ליום השואה על ניצול שואה אמיתי וסיפור חייו
             </p>
           </div>
 
@@ -149,49 +141,41 @@ export default function Page() {
             <div className="relative">
               <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/shoaa.png"
                   alt="פוסטר הסרט הבנת ההבדלים"
                   width={600}
                   height={400}
                   className="w-full h-auto"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <CustomButton size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-                    <Play className="ml-2 h-6 w-6" />
-                    צפו בטריילר
-                  </CustomButton>
-                </div>
               </div>
             </div>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">תקציר הסרט</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">תקציר הפעילות</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  הצטרפו למאיה ואלכס כשהם מנווטים בבית הספר החדש שלהם ולומדים על הגיוון היפה בכיתה שלהם. באמצעות סיפור
-                  מרתק ודמויות שניתן להזדהות איתן, ילדים מגלים כיצד הבדלים הופכים אותנו לחזקים יותר ומדוע כל כך חשוב
-                  להתייחס לכולם בכבוד ובחביבות.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, soluta tempore ex nihil sunt ipsum adipisci itaque aut quaerat autem cupiditate cum quas! Iste animi ipsa alias. Possimus, accusamus voluptatum.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-sm text-gray-600">משך זמן</div>
-                  <div className="font-semibold">25 דקות</div>
+                  <div className="font-semibold">60 דקות</div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-sm text-gray-600">קבוצת גיל</div>
-                  <div className="font-semibold">8-12 שנים</div>
+                  <div className="font-semibold">ז-יב</div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-sm text-gray-600">נושאים</div>
-                  <div className="font-semibold">גיוון, כבוד</div>
+                  <div className="font-semibold">שואה, הבדלים</div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-sm text-gray-600">דירוג</div>
                   <div className="font-semibold flex items-center">
                     <Star className="h-4 w-4 text-yellow-400 ml-1" />
-                    4.9/5
+                    4/5
                   </div>
                 </div>
               </div>
@@ -199,11 +183,7 @@ export default function Page() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <CustomButton size="lg" className="bg-green-600 hover:bg-green-700 text-white">
                   <Play className="ml-2 h-5 w-5" />
-                  צפו עכשיו
-                </CustomButton>
-                <CustomButton variant="outline" size="lg">
-                  הורידו מדריך לימוד
-                  <BookOpen className="mr-2 h-5 w-5" />
+                  צפייה בתקציר
                 </CustomButton>
               </div>
             </div>
@@ -228,8 +208,8 @@ export default function Page() {
                   <Users className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">1.2M+</h3>
-                <p className="text-gray-600">תלמידים שחונכו</p>
-                <p className="text-sm text-gray-500">ילדים ברחבי העולם למדו על גיוון וכלילות באמצעות הסרטים שלנו</p>
+                <p className="text-gray-600">תלמידים שהושפעו</p>
+                <p className="text-sm text-gray-500">השפעה משמעותיתה בתוכן חינוכי ובהשפעה חברתית</p>
               </CustomCardContent>
             </CustomCard>
 
@@ -249,8 +229,8 @@ export default function Page() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
                   <Globe className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">45</h3>
-                <p className="text-gray-600">מדינות שהושפעו</p>
+                <h3 className="text-2xl font-bold text-gray-900">5</h3>
+                <p className="text-gray-600">פעילויות</p>
                 <p className="text-sm text-gray-500">הסרטים שלנו משמשים במערכות חינוך ברחבי הגלובוס</p>
               </CustomCardContent>
             </CustomCard>
@@ -333,37 +313,6 @@ export default function Page() {
                 </div>
               </CustomCardContent>
             </CustomCard>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">מוכנים לעשות הבדל?</h2>
-              <p className="text-xl text-blue-100">
-                הצטרפו לאלפי מחנכים המשתמשים בסרטים שלנו ליצירת כיתות כוללות יותר. התחילו את המסע שלכם לקראת שינוי חיובי
-                היום.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CustomButton size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                <Shield className="ml-2 h-5 w-5" />
-                התחילו ניסיון חינם
-              </CustomButton>
-              <CustomButton
-                size="lg"
-                className="border border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-              >
-                <Heart className="ml-2 h-5 w-5" />
-                בקשו הדגמה
-              </CustomButton>
-            </div>
-
-            <p className="text-sm text-blue-200">לא נדרש כרטיס אשראי • ניסיון חינם ל-30 יום • ביטול בכל עת</p>
           </div>
         </div>
       </section>

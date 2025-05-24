@@ -38,34 +38,16 @@ export default function Navbar() {
                 לגבינו
               </Link>
               <Link
-                href="/movies/first"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
-              >
-                פנתר לבן
-              </Link>
-              <Link
-                href="/movies/second"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
-              >
-                אל תחכי לי
-              </Link>
-              <Link
-                href="/movies/third"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
-              >
-                אמצע החיים
-              </Link>
-                            <Link
-                href="/movies/fourth"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
-              >
-                פעילות יום השואה
-              </Link>
-              <Link
                 href="/workshops"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
               >
                 סדנאות משחק
+              </Link>
+              <Link
+                href={"/movies"}
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
+              >
+                כל הסרטים
               </Link>
               <Link
                 href="/contact"
@@ -131,42 +113,6 @@ export default function Navbar() {
               >
                 אודות
               </Link>
-                <Link
-                  href="/movies/first"
-                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
-                  onClick={closeMobileMenu}
-                >
-                  פנתר לבן
-                </Link>
-                <Link
-                  href="/movies/second"
-                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
-                  onClick={closeMobileMenu}
-                >
-                  אל תחכי לי
-                </Link>
-                <Link
-                  href="/movies/third"
-                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
-                  onClick={closeMobileMenu}
-                >
-                  אמצע החיים
-                </Link>
-                                <Link
-                  href="/movies/third"
-                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
-                  onClick={closeMobileMenu}
-                >
-                  
-                  אמצע החיים
-                </Link>
-                <Link
-                  href="/movies/fourth"
-                  className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
-                  onClick={closeMobileMenu}
-                >
-                  פעילות יום השואה
-                </Link>
               <Link
                 href="/workshops"
                 className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
@@ -180,6 +126,11 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
               >
                 דברו איתנו
+              </Link>
+              <Link
+              href={"/movies"}
+              className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
+              onClick={closeMobileMenu}>סרטים
               </Link>
             </div>
           </div>
