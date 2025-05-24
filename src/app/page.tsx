@@ -1,6 +1,6 @@
 "use client"
 
-import { Play, Users, Award, Heart, Star, ArrowLeft, BookOpen, Shield, Globe } from "lucide-react"
+import { Play, Users, Award, Star, ArrowLeft, Globe } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
@@ -82,7 +82,7 @@ export default function Page() {
                   מציאות
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-"קולנוע משנה מציאות" הוא מיזם חינוכי־אמנותי שמביא אל בתי הספר את הסרטים הכי נצפים בקרב תלמידי חטיבות הביניים והתיכונים בישראל.
+קולנוע משנה מציאות הוא מיזם חינוכי־אמנותי שמביא אל בתי הספר את הסרטים הכי נצפים בקרב תלמידי חטיבות הביניים והתיכונים בישראל.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -255,8 +255,8 @@ export default function Page() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "הסרטים האלה שינו את הדרך שבה התלמידים שלי חושבים על גיוון. השיחות שאנחנו מנהלים אחרי הצפייה הן
-                  מדהימות."
+                  &quot;הסרטים האלה שינו את הדרך שבה התלמידים שלי חושבים על גיוון. השיחות שאנחנו מנהלים אחרי הצפייה הן
+                  מדהימות.&quot;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -264,7 +264,7 @@ export default function Page() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">שרה מרטינז</div>
-                    <div className="text-sm text-gray-600">מורה לכיתה ה', בית ספר לינקולן</div>
+                    <div className="text-sm text-gray-600">מורה לכיתה ה&quot;, בית ספר לינקולן</div>
                   </div>
                 </div>
               </CustomCardContent>
@@ -278,7 +278,7 @@ export default function Page() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "כהורה, אני מעריך איך הסרטים האלה עוזרים לילדים שלי להבין נושאים חברתיים מורכבים בצורה מתאימה לגיל."
+                  &quot;כהורה, אני מעריך איך הסרטים האלה עוזרים לילדים שלי להבין נושאים חברתיים מורכבים בצורה מתאימה לגיל.&quot;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
@@ -300,14 +300,14 @@ export default function Page() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "האיכות והערך החינוכי של הסרטים האלה יוצאי דופן. הם כעת חלק מתוכנית הלימודים הליבה שלנו."
+                  &quot;האיכות והערך החינוכי של הסרטים האלה יוצאי דופן. הם כעת חלק מתוכנית הלימודים הליבה שלנו.&quot;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 font-semibold">רח</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">ד"ר רחל חן</div>
+                    <div className="font-semibold text-gray-900">ד&quot;ר רחל חן</div>
                     <div className="text-sm text-gray-600">מנהלת תוכנית לימודים, בתי ספר מטרו</div>
                   </div>
                 </div>
