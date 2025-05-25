@@ -199,7 +199,10 @@ export default function Page() {
                   <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
         <div className="mx-auto flex flex-col mt-60 h-screen items-stretch justify-center md:flex-row md:mt-0">
             <ImageCarousel />
-            <Explanation />
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4">חדש! סדנאות קבועות או חד פעמיות</h2>
+              <Explanation />
+            </div>
         </div>
       </section>
 
@@ -209,7 +212,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ההשפעה שלנו על החינוך</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              ראו כיצד הסרטים החינוכיים שלנו עושים הבדל אמיתי בכיתות ובקהילות ברחבי העולם.
+              ההשפעה של הסרטים והפעילויות על עולם החינוך
             </p>
           </div>
 
