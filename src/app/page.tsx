@@ -94,18 +94,6 @@ function CustomCardContent({ children, className = "" }: CardContentProps) {
   return <div className={`p-6 ${className}`}>{children}</div>
 }
 
-// Custom Badge Component
-interface BadgeProps {
-  children: ReactNode
-  className?: string
-}
-
-function CustomBadge({ children, className = "" }: BadgeProps) {
-  return (
-    <div className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${className}`}>{children}</div>
-  )
-}
-
 export default function Page() {
   const router = useRouter();
   return (
