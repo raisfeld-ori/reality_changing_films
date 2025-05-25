@@ -2,10 +2,19 @@ import Image from "next/image"
 import Link from "next/link"
 
 const movies = [
+      {
+    id: 2,
+    title: "אמצע החיים",
+    year: 2024,
+    genre: "דת, רוחניות, התמודדות עם קשיים",
+    duration: "שעתיים",
+    link: "third",
+    image: "/middlelife.jpg"
+  },
     {
     id: 3,
-    title: "אל תחכי לי",
-    year: 2021,
+    title: "(גרסה חדשה 2025) אל תחכי לי",
+    year: 2025,
     genre: "נוער, לקחת אחריות",
     duration: "שעתיים",
     link: "second",
@@ -19,15 +28,6 @@ const movies = [
     duration: "שעתיים",
     link: "first",
     image: "/whitepanther.jpg"
-  },
-    {
-    id: 2,
-    title: "אמצע החיים",
-    year: 2024,
-    genre: "דת, רוחניות, התמודדות עם קשיים",
-    duration: "שעתיים",
-    link: "third",
-    image: "/middlelife.jpg"
   },
   {
     id: 4,

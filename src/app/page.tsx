@@ -8,38 +8,34 @@ import type { ReactNode } from "react"
 
 const movies = [
     {
-    id: 3,
-    title: "אל תחכי לי",
-    year: 2021,
-    genre: "נוער, לקחת אחריות",
-    duration: "שעתיים",
-    link: "second",
-    image: "/dontwaitforme.jpg"
-  },
-  {
     id: 2,
     title: "פנתר לבן",
-    year: 2013,
-    genre: "גזענות, אחדות, ספורט",
-    duration: "שעתיים",
+    genre: "נושאים: גזענות, בחירות, ישראליות, קבלת האחר",
+    content: "בכיכובו של השחקן האגדי זאב רווח",
     link: "first",
     image: "/whitepanther.jpg"
+  },
+    {
+    id: 3,
+    title: "(גרסה חדשה 2025) אל תחכי לי",
+    genre: "נושאים: לקיחת אחריות, קבלת החלטות, מניעת אלימות, התמודדות עם חרם ולחץ חברתי",
+    content: "בכיכובם של עומר חזן, עינת שרוף, טיילור מלכוב ואורי גבריאל",
+    link: "second",
+    image: "/dontwaitforme.jpg"
   },
       {
     id: 1,
     title: "אמצע החיים",
-    year: 2024,
-    genre: "דת, רוחניות, התמודדות עם קשיים",
-    duration: "שעתיים",
+    genre: "מתאים לפעילות חדר מורים, כולל סדנה",
+    content: "חדש מהקולנוע! בכיכובם של שלום אסייג, צחי הלבי, חן אמסלם, יניב סוויסה (קופה ראשית)",
     link: "third",
     image: "/middlelife.jpg"
   },
   {
     id: 4,
-    title: "יום השואה",
-    year: 2025,
-    genre: "שואה",
-    duration: "שעתיים",
+    title: "פעילות יום השואה",
+    genre: "נושאים: יום השואה, גזענות, ישראליות, תקומה",
+    content: "חדש! כולל ציורי אנימציה ופעילות סדנת משחק",
     link: "fourth",
     image: "/shoaa2.png"
   }
@@ -186,9 +182,9 @@ export default function Page() {
                     {movie.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-2">
-                    {movie.year} • {movie.duration}
+                    {movie.content}
                   </p>
-                  <p className="text-gray-500 text-xs mb-2">נושאים: {movie.genre}</p>
+                  <p className="text-gray-500 text-xs mb-2">{movie.genre}</p>
                 </div>
               </div>
             </Link>
