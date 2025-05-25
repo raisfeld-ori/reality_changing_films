@@ -41,7 +41,7 @@ const movies = [
     genre: "שואה",
     duration: "שעתיים",
     link: "fourth",
-    image: "/shoaa.png"
+    image: "/shoaa2.png"
   }
 ]
 
