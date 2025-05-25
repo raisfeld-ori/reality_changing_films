@@ -5,6 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
+import Explanation from "./workshops/Explanation";
+import ImageCarousel from "./workshops/Carousel";
 
 const movies = [
     {
@@ -238,6 +240,13 @@ export default function Page() {
               </CustomCardContent>
             </CustomCard>
           </div>
+        </div>
+      </section>
+
+            <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
+        <div className="mx-auto flex flex-col mt-60 h-screen items-stretch justify-center md:flex-row md:mt-0">
+            <ImageCarousel />
+            <Explanation />
         </div>
       </section>
 
