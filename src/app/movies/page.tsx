@@ -17,7 +17,7 @@ const movies = [
     year: 2024,
     genre: "דת, רוחניות, התמודדות עם קשיים",
     duration: "שעתיים",
-    link: "second",
+    link: "third",
     image: "/middlelife.jpg"
   },
   {
@@ -26,7 +26,7 @@ const movies = [
     year: 2021,
     genre: "נוער, לקחת אחריות",
     duration: "שעתיים",
-    link: "third",
+    link: "second",
     image: "/dontwaitforme.jpg"
   },
   {

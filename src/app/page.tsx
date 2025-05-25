@@ -22,7 +22,7 @@ const movies = [
     year: 2024,
     genre: "דת, רוחניות, התמודדות עם קשיים",
     duration: "שעתיים",
-    link: "second",
+    link: "third",
     image: "/middlelife.jpg"
   },
   {
@@ -31,7 +31,7 @@ const movies = [
     year: 2021,
     genre: "נוער, לקחת אחריות",
     duration: "שעתיים",
-    link: "third",
+    link: "second",
     image: "/dontwaitforme.jpg"
   },
   {
@@ -172,11 +172,7 @@ export default function Page() {
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <CustomBadge className="bg-green-100 text-green-800 hover:bg-green-200 mb-4">הפקה חדשה</CustomBadge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">יום השואה</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              פעילות ליום השואה על ניצול שואה אמיתי וסיפור חייו
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרטים והפעילויות</h2>
           </div>
 
           <div className="grid gap-12 items-center">
