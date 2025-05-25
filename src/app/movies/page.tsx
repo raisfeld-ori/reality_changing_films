@@ -2,14 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 const movies = [
-  {
-    id: 1,
-    title: "פנתר לבן",
-    year: 2013,
-    genre: "גזענות, אחדות, ספורט",
+    {
+    id: 3,
+    title: "אל תחכי לי",
+    year: 2021,
+    genre: "נוער, לקחת אחריות",
     duration: "שעתיים",
-    link: "first",
-    image: "/whitepanther.jpg"
+    link: "second",
+    image: "/dontwaitforme.jpg"
   },
   {
     id: 2,
@@ -20,14 +20,14 @@ const movies = [
     link: "third",
     image: "/middlelife.jpg"
   },
-  {
-    id: 3,
-    title: "אל תחכי לי",
-    year: 2021,
-    genre: "נוער, לקחת אחריות",
+    {
+    id: 1,
+    title: "פנתר לבן",
+    year: 2013,
+    genre: "גזענות, אחדות, ספורט",
     duration: "שעתיים",
-    link: "second",
-    image: "/dontwaitforme.jpg"
+    link: "first",
+    image: "/whitepanther.jpg"
   },
   {
     id: 4,

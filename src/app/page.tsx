@@ -16,6 +16,15 @@ const movies = [
     link: "third",
     image: "/middlelife.jpg"
   },
+    {
+    id: 3,
+    title: "אל תחכי לי",
+    year: 2021,
+    genre: "נוער, לקחת אחריות",
+    duration: "שעתיים",
+    link: "second",
+    image: "/dontwaitforme.jpg"
+  },
   {
     id: 2,
     title: "פנתר לבן",
@@ -24,15 +33,6 @@ const movies = [
     duration: "שעתיים",
     link: "first",
     image: "/whitepanther.jpg"
-  },
-  {
-    id: 3,
-    title: "אל תחכי לי",
-    year: 2021,
-    genre: "נוער, לקחת אחריות",
-    duration: "שעתיים",
-    link: "second",
-    image: "/dontwaitforme.jpg"
   },
   {
     id: 4,
