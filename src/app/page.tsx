@@ -244,8 +244,8 @@ export default function Page() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
                   <Globe className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">5</h3>
-                <p className="text-gray-600">פעילויות</p>
+                <h3 className="text-2xl font-bold text-gray-900">פנתר לבן</h3>
+                <p className="text-gray-600">הסרט השלישי הכי נצפה בחטיבות ותיכונים</p>
                 <p className="text-sm text-gray-500">הסרטים שלנו משמשים במערכות חינוך ברחבי הגלובוס</p>
               </CustomCardContent>
             </CustomCard>
