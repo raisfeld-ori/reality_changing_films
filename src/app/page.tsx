@@ -2,8 +2,48 @@
 
 import { Play, Users, Award, Star, ArrowLeft, Globe } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
+
+const movies = [
+  {
+    id: 1,
+    title: "פנתר לבן",
+    year: 2013,
+    genre: "גזענות, אחדות, ספורט",
+    duration: "שעתיים",
+    link: "first",
+    image: "/whitepanther.jpg"
+  },
+  {
+    id: 2,
+    title: "אמצע החיים",
+    year: 2024,
+    genre: "דת, רוחניות, התמודדות עם קשיים",
+    duration: "שעתיים",
+    link: "second",
+    image: "/middlelife.jpg"
+  },
+  {
+    id: 3,
+    title: "אל תחכי לי",
+    year: 2021,
+    genre: "נוער, לקחת אחריות",
+    duration: "שעתיים",
+    link: "third",
+    image: "/dontwaitforme.jpg"
+  },
+  {
+    id: 4,
+    title: "יום השואה",
+    year: 2025,
+    genre: "שואה",
+    duration: "שעתיים",
+    link: "fourth",
+    image: "/shoaa.png"
+  }
+]
 
 // Custom Button Component
 interface ButtonProps {
@@ -82,7 +122,7 @@ export default function Page() {
                   מציאות
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-קולנוע משנה מציאות הוא מיזם חינוכי־אמנותי שמביא אל בתי הספר את הסרטים הכי נצפים בקרב תלמידי חטיבות הביניים והתיכונים בישראל.
+הסרטים הכי נצפים ופופולריים בחטיבות ובתיכונים בישראל. עוסקים בנושא חרם, גזענות, אלימות, השואה ועוד.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -97,21 +137,22 @@ export default function Page() {
               </div>
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">20+</div>
+                  <div className="text-2xl font-bold text-blue-600">10+</div>
                   <div className="text-sm text-gray-600">שנים של ניסיון</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">1M+</div>
-                  <div className="text-sm text-gray-600">ילדים שהושפעו</div>
+                  <div className="text-2xl font-bold text-blue-600">97</div>
+                  <div className="text-sm text-gray-600">במשובים ובגפן</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">200+</div>
-                  <div className="text-sm text-gray-600">בתי ספר שותפים</div>
+                  <div className="text-2xl font-bold text-blue-600">150+</div>
+                  <div className="text-sm text-gray-600">בתי ספר בשנה</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Link href={"/movies"}>
                 <Image
                   src="/contact.jpg"
                   alt=""
@@ -119,6 +160,7 @@ export default function Page() {
                   height={600}
                   className="w-full h-auto"
                 />
+                </Link>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
             </div>
@@ -137,56 +179,36 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <Image
-                  src="/shoaa.png"
-                  alt="פוסטר הסרט הבנת ההבדלים"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
+          <div className="grid gap-12 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-w-full gap-6">
+          {movies.map((movie) => (
+            <Link key={movie.id} href={`/movies/${movie.link}`} className="group cursor-pointer">
+              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                {/* Movie Poster */}
+                <div className="relative aspect-[2/3] overflow-hidden">
+                  <Image
+                    src={movie.image}
+                    alt={movie.title}
+                    width={300}
+                    height={450}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">תקציר הפעילות</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, soluta tempore ex nihil sunt ipsum adipisci itaque aut quaerat autem cupiditate cum quas! Iste animi ipsa alias. Possimus, accusamus voluptatum.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm text-gray-600">משך זמן</div>
-                  <div className="font-semibold">60 דקות</div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm text-gray-600">קבוצת גיל</div>
-                  <div className="font-semibold">ז-יב</div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm text-gray-600">נושאים</div>
-                  <div className="font-semibold">שואה, הבדלים</div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm text-gray-600">דירוג</div>
-                  <div className="font-semibold flex items-center">
-                    <Star className="h-4 w-4 text-yellow-400 ml-1" />
-                    4/5
-                  </div>
+                {/* Movie Info */}
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-1 group-hover:text-red-600 transition-colors">
+                    {movie.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-2">
+                    {movie.year} • {movie.duration}
+                  </p>
+                  <p className="text-gray-500 text-xs mb-2">נושאים: {movie.genre}</p>
                 </div>
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <CustomButton size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-                  <Play className="ml-2 h-5 w-5" />
-                  צפייה בתקציר
-                </CustomButton>
-              </div>
-            </div>
+            </Link>
+          ))}
+    </div>
           </div>
         </div>
       </section>
