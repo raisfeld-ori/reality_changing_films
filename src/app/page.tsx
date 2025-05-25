@@ -173,6 +173,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרטים והפעילויות</h2>
+            <h3 className="text-lg text-gray-600">תלחצו על פוסטר בשביל עוד מידע</h3>
           </div>
 
           <div className="grid gap-12 items-center">
