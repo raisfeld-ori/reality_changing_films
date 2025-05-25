@@ -11,15 +11,6 @@ const movies = [
     link: "second",
     image: "/dontwaitforme.jpg"
   },
-  {
-    id: 2,
-    title: "אמצע החיים",
-    year: 2024,
-    genre: "דת, רוחניות, התמודדות עם קשיים",
-    duration: "שעתיים",
-    link: "third",
-    image: "/middlelife.jpg"
-  },
     {
     id: 1,
     title: "פנתר לבן",
@@ -28,6 +19,15 @@ const movies = [
     duration: "שעתיים",
     link: "first",
     image: "/whitepanther.jpg"
+  },
+    {
+    id: 2,
+    title: "אמצע החיים",
+    year: 2024,
+    genre: "דת, רוחניות, התמודדות עם קשיים",
+    duration: "שעתיים",
+    link: "third",
+    image: "/middlelife.jpg"
   },
   {
     id: 4,
