@@ -7,23 +7,23 @@ import { useRouter } from "next/navigation"
 import type { ReactNode } from "react"
 
 const movies = [
-  {
+    {
     id: 1,
-    title: "פנתר לבן",
-    year: 2013,
-    genre: "גזענות, אחדות, ספורט",
-    duration: "שעתיים",
-    link: "first",
-    image: "/whitepanther.jpg"
-  },
-  {
-    id: 2,
     title: "אמצע החיים",
     year: 2024,
     genre: "דת, רוחניות, התמודדות עם קשיים",
     duration: "שעתיים",
     link: "third",
     image: "/middlelife.jpg"
+  },
+  {
+    id: 2,
+    title: "פנתר לבן",
+    year: 2013,
+    genre: "גזענות, אחדות, ספורט",
+    duration: "שעתיים",
+    link: "first",
+    image: "/whitepanther.jpg"
   },
   {
     id: 3,
@@ -160,8 +160,8 @@ export default function Page() {
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרטים והפעילויות</h2>
-            <h3 className="text-lg text-gray-600">תלחצו על פוסטר בשביל עוד מידע</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרטים הכי נצפים בחטיבות וסרטונים</h2>
+            <h3 className="text-lg text-gray-600">תלחצו על סרט בשביל ללמוד עוד</h3>
           </div>
 
           <div className="grid gap-12 items-center">
