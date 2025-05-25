@@ -196,6 +196,13 @@ export default function Page() {
         </div>
       </section>
 
+                  <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
+        <div className="mx-auto flex flex-col mt-60 h-screen items-stretch justify-center md:flex-row md:mt-0">
+            <ImageCarousel />
+            <Explanation />
+        </div>
+      </section>
+
       {/* Impact Section */}
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -240,13 +247,6 @@ export default function Page() {
               </CustomCardContent>
             </CustomCard>
           </div>
-        </div>
-      </section>
-
-            <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
-        <div className="mx-auto flex flex-col mt-60 h-screen items-stretch justify-center md:flex-row md:mt-0">
-            <ImageCarousel />
-            <Explanation />
         </div>
       </section>
 
