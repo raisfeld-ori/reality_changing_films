@@ -1,6 +1,6 @@
 "use client"
 
-import { Play, Users, Award, Star, ArrowLeft, Globe } from "lucide-react"
+import { Play, Users, Award, Star, ArrowLeft, Globe, School2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -300,7 +300,7 @@ export default function Page() {
                     <span className="text-green-600 font-semibold">דג</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">דוד ג&quot;ונסון</div>
+                    <div className="font-semibold text-gray-900">דוד רז</div>
                     <div className="text-sm text-gray-600">הורה וחבר מועצת בית הספר</div>
                   </div>
                 </div>

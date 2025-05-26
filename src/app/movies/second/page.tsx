@@ -5,7 +5,7 @@ export default function Page(){
         "הסרט מבוסס על סיפור ילדותו של הבמאי דני רייספלד.",
         "נושאים עיקריים: מאבק באלימות, זהות ישראלית, זכויות אדם, הכלה והשתלבות, קבלת החלטות, המעבר מחטיבה לתיכון, חוסן אישי והתמודדות עם אתגרים.",
         "הסרט מציע גרסאות וסדנאות מותאמות לשכבות גיל ט'-יב.",
-      ]} extraFile='/content2.pdf' trailerSrc='https://vimeo.com/1028010416?share=copy' reviews={[
+      ]} extraFile='/content2.pdf' fileTitle='מערך שיעור עם שלום אסייג' trailerSrc='https://vimeo.com/1028010416?share=copy' reviews={[
         {
             title: 'מומלץ על ידי יפעת שאשא ביטון',
             text: "יפעת שאשא ביטון",

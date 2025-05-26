@@ -4,11 +4,13 @@ import { Laugh, Play, School2, Tv,  } from 'lucide-react'
 
 interface MovieShowcaseProps {
   title: string
+  trailerTitle?: string
   description: string[]
   trailerSrc: string
   backgroundImageSrc: string
   content?: Content[]
   extraFile?: string
+  fileTitle?: string
   reviews?: Content[]
   newMovie?: boolean
 }
@@ -22,6 +24,8 @@ export default function MovieShowcase({
   extraFile = '',
   newMovie = false,
   reviews = [],
+  fileTitle = "מערך שיעור",
+  trailerTitle = "צפייה בטריילר"
 }: MovieShowcaseProps) {
   const [showContents, setShowContents] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
@@ -44,7 +48,7 @@ export default function MovieShowcase({
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center w-64 justify-center transition duration-300"
         >
           <Play size={24} className="mr-2 ml-2" />
-          לצפייה בטריילר
+          {trailerTitle}
         </button>
         </Link>
         {!!content && content.length > 0 && <button
@@ -66,7 +70,7 @@ export default function MovieShowcase({
           className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center transition duration-300"
         >
           <School2 size={24} className="mr-2 ml-2" />
-          מערך שיעור
+          {fileTitle}
         </a>}
         </div>
       </div>
