@@ -1,6 +1,6 @@
 "use client"
 
-import { Play, Users, Award, Star, ArrowLeft, Globe, School2 } from "lucide-react"
+import { Play, Users, Award, Star, ArrowLeft, Globe } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
