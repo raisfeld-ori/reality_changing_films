@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import Explanation from "../workshops/Explanation";
+import ImageCarousel from "../workshops/Carousel";
 
 const movies = [
     {
@@ -72,6 +74,15 @@ export default function HomePage() {
           ))}
         </div>
       </main>
+                        <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
+              <div className="mx-auto flex flex-col mt-60 h-screen items-stretch justify-center md:flex-row md:mt-0">
+                  <ImageCarousel />
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4">חדש! סדנאות קבועות או חד פעמיות</h2>
+                    <Explanation />
+                  </div>
+              </div>
+            </section>
     </div>
   )
 }
