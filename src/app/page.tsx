@@ -159,6 +159,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">הסרטים הכי נצפים בחטיבות וסרטונים</h2>
+            <h3 className="text-lg text-gray-600">לכל סרט יש גרסאות מותאמות לחטיבה, תיכון, וצבא</h3>
             <h3 className="text-lg text-gray-600">תלחצו על סרט בשביל ללמוד עוד</h3>
           </div>
 
