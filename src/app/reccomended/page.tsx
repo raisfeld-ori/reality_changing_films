@@ -70,8 +70,7 @@ export default function SwipeGallery() {
       <div className="w-full max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4">Interactive Gallery</h1>
-          <p className="text-gray-300 text-lg">Swipe, drag, or use buttons to navigate through the collection</p>
+          <p className="text-gray-300 text-lg">צפו בהמלצות השונות, השתמשו באצבע או בעכבר בשביל להחליף בין המלצות</p>
         </div>
 
         {/* Swiper Container */}
