@@ -49,6 +49,12 @@ export default function Navbar() {
               >
                 כל הסרטים
               </Link>
+                <Link
+                href={"/reccomended"}
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
+              >
+                המלצות
+              </Link>
               <Link
                 href="/contact"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-20"
@@ -126,6 +132,13 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
               >
                 דברו איתנו
+              </Link>
+              <Link
+                href="/reccomended"
+                className="block py-4 text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-blue-600"
+                onClick={closeMobileMenu}
+              >
+                המלצות
               </Link>
               <Link
               href={"/movies"}
