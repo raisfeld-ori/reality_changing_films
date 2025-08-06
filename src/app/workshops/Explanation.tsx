@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Component() {
   return (
-    <div className="w-full bg-white flex items-center justify-center p-4">
+    <div className="w-full bg-white flex items-center justify-center p-4 mb-20">
       <div className="max-w-4xl w-full text-center">
         <h1 className="text-2xl md:text-4xl font-bold text-blue-600 mb-8">
           סדנאות אודישנים ומשחק מול מצלמה
@@ -19,11 +19,11 @@ export default function Component() {
         >
           דברו איתנו
         </Link>
-        <a href="/content3.pdf" target="_blank" className="px-8 py-3 bg-purple-500 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
+        <a href="/content3.pdf" target="_blank" className="px-8 py-3 mb-5 md:mb-0 md:mr-5 md:ml-5 bg-purple-500 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
           סיכום רשום
         </a>
         <a href="https://vimeo.com/1079737199?share=copy" target="_blank" className="px-8 py-3 bg-amber-400 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50">
-          סרטון דוגמה
+          סרטון הסבר
         </a>
         </div>
       </div>
