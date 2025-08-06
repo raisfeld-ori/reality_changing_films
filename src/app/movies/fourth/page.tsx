@@ -5,6 +5,6 @@ export default function Page(){
         "סיפור מרתק, מרגש ומצחיק מלווה בסרטוני אנימציה ותמונות קומיקס מקוריים שהופקו למען הפעילות.",
         "מתקימת גם סדנת משחק בנושא גזענות",
         "הפעילות עברה בהצלחה בחטיבות רבות, התלמידים חוו חוויה שרתקה אותם ורגשה אותם."
-    ]} trailerSrc='/shoaa_animated.mp4' trailerTitle='צפייה בסרטון דוגמה' content={[
+    ]} trailerSrc='/otto.mp4' trailerTitle='צפייה בסרטון דוגמה' content={[
     ]} backgroundImageSrc='/shoaa2.png'></Movie>
 }
