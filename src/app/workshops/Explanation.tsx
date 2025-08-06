@@ -20,7 +20,10 @@ export default function Component() {
           דברו איתנו
         </Link>
         <a href="/content3.pdf" target="_blank" className="px-8 py-3 bg-purple-500 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
-          סרטון סיכום 2025
+          סיכום רשום
+        </a>
+        <a href="https://vimeo.com/1079737199?share=copy" target="_blank" className="px-8 py-3 bg-amber-400 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50">
+          סרטון דוגמה
         </a>
         </div>
       </div>
